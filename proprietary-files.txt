@@ -328,7 +328,6 @@ vendor/etc/pwr/CameraPowerOptFeature.xml
 vendor/etc/vintf/manifest/android.hardware.camera.provider.external.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.dynamiccameraserver.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera.xml
-vendor/lib64/hw/mapper.qti.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libOpenCL_adreno.so
@@ -342,10 +341,6 @@ vendor/lib64/libcameraobserver.so
 vendor/lib64/libcameraopt.so
 vendor/lib64/libcamerapoweroptfeature.so
 vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libdisplaydebug.so
-vendor/lib64/libgralloc.qti.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
 vendor/lib64/libgsl.so
 vendor/lib64/libheichal_qcom.so
 vendor/lib64/libkcl.so
@@ -353,7 +348,6 @@ vendor/lib64/libkernelmanager.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libllvm-qgl.so
-vendor/lib64/libmapperutils.so
 vendor/lib64/libmemutils.so
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
@@ -366,7 +360,6 @@ vendor/lib64/libopencv_imgproc.so
 vendor/lib64/libos.so
 vendor/lib64/libproj_sot.so;DISABLE_DEPS
 vendor/lib64/libqcbor.so
-vendor/lib64/libqdMetaData.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqspm-mem-utils-vendor.so
 vendor/lib64/libscveCommon.so
@@ -386,7 +379,6 @@ vendor/lib64/libsvswcpu.so
 vendor/lib64/libsynx.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthreadutils.so
-vendor/lib64/vendor.qti.hardware.display.snapalloc-impl.so
 vendor/lib64/vendor.qti.hardware.hexlp-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.hexlp-V2-ndk.so
 vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
@@ -411,10 +403,7 @@ vendor/lib64/libwfdutils_proprietary.so
 # Display
 vendor/bin/hw/android.hardware.media.c2-mi-service
 vendor/bin/hw/vendor.dolby.media.c2-default-service-dax
-vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.color-service
-vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS
-vendor/bin/hw/vendor.qti.hardware.display.demura-service
 vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature_aidl-service
@@ -571,16 +560,12 @@ vendor/lib64/libdmshal.so
 vendor/lib64/libdpps.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
-vendor/lib64/libdrmutils.so
 vendor/lib64/libfastcrc.so
 vendor/lib64/libfeutils.so
-vendor/lib64/libfilefinder.so
 vendor/lib64/libgpt.so
-vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libhdr_als_adapter.so
 vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_tm.so
-vendor/lib64/libhistogram.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/libnova.so
 vendor/lib64/libnova_aicodec.so
@@ -599,15 +584,10 @@ vendor/lib64/libqttestservice.so
 vendor/lib64/librcmask.so
 vendor/lib64/libresourcemanager.so
 vendor/lib64/librpmb.so
-vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmclient.so;DISABLE_DEPS
-vendor/lib64/libsdmcore.so;DISABLE_DEPS
-vendor/lib64/libsdmdal.so;DISABLE_DEPS
 vendor/lib64/libsdmextension.so
-vendor/lib64/libsdmutils.so
 vendor/lib64/libseclog.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libspl.so
@@ -629,6 +609,45 @@ vendor/lib64/vendor.xiaomi.hardware.videoservice-V11-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.videoservice-V6-ndk.so
 vendor/lib64/vendor.xiaomi.sensor.camera-V1-ndk.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
+
+# Display: the stock Qualcomm display stack. Xiaomi's SDM is a different version than
+# hardware/qcom-caf/sm8850/display (HWC extensions, QDCM, mi_display nodes), so the composer,
+# allocator, mapper and their libraries come from stock and replace the source modules of the
+# same name. Their .rc and VINTF files are renamed (_stock): the replaced source modules
+# still define install rules for the original names.
+vendor/bin/hw/vendor.qti.hardware.display.allocator-service
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS
+vendor/bin/hw/vendor.qti.hardware.display.demura-service
+vendor/bin/init.qti.display_boot.sh:vendor/bin/init.qti.display_boot_stock.sh
+vendor/etc/init/init.qti.display_boot.rc:vendor/etc/init/init.qti.display_boot_stock.rc
+vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc:vendor/etc/init/vendor.qti.hardware.display.allocator-service_stock.rc
+vendor/etc/init/vendor.qti.hardware.display.composer-service.rc:vendor/etc/init/vendor.qti.hardware.display.composer-service_stock.rc
+vendor/etc/init/vendor.qti.hardware.display.demura-service.rc:vendor/etc/init/vendor.qti.hardware.display.demura-service_stock.rc
+vendor/etc/vintf/manifest/mapper.qti.xml:vendor/etc/vintf/manifest/mapper.qti_stock.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml:vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service_stock.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service3_v4.xml:vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service3_v4_stock.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.display.demura-service.xml:vendor/etc/vintf/manifest/vendor.qti.hardware.display.demura-service_stock.xml
+vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
+vendor/lib64/hw/mapper.qti.so
+vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/libdisplaydebug.so
+vendor/lib64/libdrmutils.so
+vendor/lib64/libfilefinder.so
+vendor/lib64/libgpu_tonemapper.so
+vendor/lib64/libgralloc.qti.so
+vendor/lib64/libgralloccore.so
+vendor/lib64/libgrallocutils.so
+vendor/lib64/libhistogram.so
+vendor/lib64/libmapperutils.so
+vendor/lib64/libqdMetaData.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libqservice.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdmclient.so;DISABLE_DEPS
+vendor/lib64/libsdmcore.so;DISABLE_DEPS
+vendor/lib64/libsdmdal.so;DISABLE_DEPS
+vendor/lib64/libsdmutils.so
+vendor/lib64/vendor.qti.hardware.display.snapalloc-impl.so
 
 # Fingerprint
 vendor/etc/permissions/android.hardware.biometrics.face.xml
@@ -731,7 +750,6 @@ vendor/lib64/libbaa_ChargerModeProtect.so
 vendor/lib64/libbaa_FreqChgFvDown.so
 vendor/lib64/libbaa_LowSohFvDown.so
 vendor/lib64/libbaa_common.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/liboffscreenpoweroptfeature.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libpsmoptfeature.so
@@ -1420,10 +1438,8 @@ vendor/lib64/libq-perflog.so
 vendor/lib64/libqasr.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdutils.so
 vendor/lib64/libqlmclient_dyn.so
 vendor/lib64/libqpt.so
-vendor/lib64/libqservice.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libqti-appclassifier.so
 vendor/lib64/libqti-engine-loader.so
@@ -1907,4 +1923,3 @@ vendor/lib64/liblowi_wifihal.so
 vendor/lib64/vendor.xiaomi.cit.wifi-V2-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.wifi.hardware-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.wifi.hostapd-V1-ndk.so
-

@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.fixups_blob import (
+    blob_fixup,
+    blob_fixups_user_type,
+)
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -13,9 +17,16 @@ namespace_imports = [
     'device/xiaomi/sm8850-common',
 ]
 
+blob_fixups: blob_fixups_user_type = {
+    # The stock display_boot service runs the renamed stock script
+    'vendor/etc/init/init.qti.display_boot_stock.rc': blob_fixup()
+        .regex_replace(r'/vendor/bin/init\.qti\.display_boot\.sh', '/vendor/bin/init.qti.display_boot_stock.sh'),
+}  # fmt: skip
+
 module = ExtractUtilsModule(
     'sm8850-common',
     'xiaomi',
+    blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
 )
 

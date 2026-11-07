@@ -87,7 +87,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qcrild.sh \
-    init.qti.display_boot.sh \
     init.qti.ese.strongbox.sh \
     init.qti.kernel.debug-alor.sh \
     init.qti.kernel.debug-canoe.sh \
@@ -166,4 +165,5 @@ PRODUCT_PACKAGES += \
     usb_compositions.conf \
     vendor.qti.hardware.memtrack-service \
     vendor.qti.qspa-service
+
 
