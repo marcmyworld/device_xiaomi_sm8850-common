@@ -158,3 +158,18 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
+# HALs built from source (stock binaries share these module names)
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-V1-external-service \
+    android.hardware.drm-service-lazy.clearkey \
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery \
+    android.hardware.ir-service.example \
+    android.hardware.sensors-service.multihal \
+    android.hardware.usb-service.qti \
+    android.hardware.usb.gadget-service.qti \
+    sensors.dynamic_sensor_hal \
+    usb_compositions.conf \
+    vendor.qti.hardware.memtrack-service \
+    vendor.qti.qspa-service
+
