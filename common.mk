@@ -175,3 +175,7 @@ PRODUCT_PACKAGES += \
     IPACM_Filter_cfg.xml \
     IPACM_cfg.xml
 
+# Thermal: QTI thermal HAL built from hardware/qcom-caf/thermal; stock thermal configs stay
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
