@@ -105,7 +105,7 @@ PRODUCT_PACKAGES += \
     system_dlkm_modprobe.sh \
     ufs_ffu.sh \
     vendor.qti.diag.sh \
-    vendor_modprobe.sh \
+    vendor_modprobe.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.recovery.hardware.rc \
     init.recovery.qcom.rc \
-    miui.factoryreset.rc \
+    miui.factoryreset.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.qcom
@@ -185,3 +185,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
+# Stable AIDL interface versions linked by stock vendor blobs with DISABLE_DEPS (already the
+# newest frozen versions, see blob_fixups in extract-files.py for the older ones)
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice-V1-ndk \
+    android.hardware.biometrics.common-V4-ndk \
+    android.hardware.camera.common-V1-ndk \
+    android.hardware.common-V2-ndk \
+    android.hardware.secure_element-V1-ndk \
+    android.hardware.security.rkp-V3-ndk \
+    android.hardware.security.secureclock-V1-ndk \
+    android.hardware.security.sharedsecret-V1-ndk \
+    android.hardware.sensors-V3-ndk \
+    qti-audio-types-aidl-V1-ndk \
+    vendor.qti.hardware.bluetooth.audio-V1-ndk \
+    vendor.qti.hardware.display.postproc-V1-ndk
