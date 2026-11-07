@@ -358,13 +358,13 @@ vendor/lib64/libmemutils.so
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libmisight.so
-vendor/lib64/libmnn_wrapper.so
+vendor/lib64/libmnn_wrapper.so;DISABLE_DEPS
 vendor/lib64/libnspextensioncopyservice.so
 vendor/lib64/libnspextensiongenericqnnservice.so
 vendor/lib64/libopencv_core.so
 vendor/lib64/libopencv_imgproc.so
 vendor/lib64/libos.so
-vendor/lib64/libproj_sot.so
+vendor/lib64/libproj_sot.so;DISABLE_DEPS
 vendor/lib64/libqcbor.so
 vendor/lib64/libqdMetaData.so
 vendor/lib64/libqrtr.so
@@ -392,8 +392,8 @@ vendor/lib64/vendor.qti.hardware.hexlp-V2-ndk.so
 vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.aon-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.camera.injection-V1-ndk.so
-vendor/lib64/vendor.xiaomi.hardware.camera.injection-client.so
-vendor/lib64/vendor.xiaomi.hardware.camera.injection-service.so
+vendor/lib64/vendor.xiaomi.hardware.camera.injection-client.so;DISABLE_DEPS
+vendor/lib64/vendor.xiaomi.hardware.camera.injection-service.so;DISABLE_DEPS
 vendor/lib64/vendor.xiaomi.hardware.camera.synthetic-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.camera.synthetic-impl.so
 
@@ -405,7 +405,7 @@ vendor/lib64/libmmosal_vendor.so
 vendor/lib64/libwfdcommonutils_proprietary.so
 vendor/lib64/libwfddisplayconfig_vendor.so
 vendor/lib64/libwfdhdcpcp.so
-vendor/lib64/libwfdhdcpservice_proprietary.so
+vendor/lib64/libwfdhdcpservice_proprietary.so;DISABLE_DEPS;REQUIRED=libclang_rt.ubsan_standalone
 vendor/lib64/libwfdutils_proprietary.so
 
 # Display
@@ -413,7 +413,7 @@ vendor/bin/hw/android.hardware.media.c2-mi-service
 vendor/bin/hw/vendor.dolby.media.c2-default-service-dax
 vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.color-service
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS
 vendor/bin/hw/vendor.qti.hardware.display.demura-service
 vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
@@ -538,14 +538,14 @@ vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/libBlAlgointf.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libRecordCNN.so
+vendor/lib64/libRecordCNN.so;DISABLE_DEPS
 vendor/lib64/libTrustedInputUtils.so
 vendor/lib64/lib_decoder_aihc.so
 vendor/lib64/lib_decoderv2.so
 vendor/lib64/lib_encoder_aihc.so
 vendor/lib64/lib_encoderv2.so
 vendor/lib64/libbacklight-calib.so
-vendor/lib64/libchar_dura_predict.so
+vendor/lib64/libchar_dura_predict.so;DISABLE_DEPS
 vendor/lib64/libclstc_tm.so
 vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_aihc_dec.so
@@ -603,9 +603,9 @@ vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmclient.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmdal.so
+vendor/lib64/libsdmclient.so;DISABLE_DEPS
+vendor/lib64/libsdmcore.so;DISABLE_DEPS
+vendor/lib64/libsdmdal.so;DISABLE_DEPS
 vendor/lib64/libsdmextension.so
 vendor/lib64/libsdmutils.so
 vendor/lib64/libseclog.so
@@ -832,7 +832,7 @@ vendor/etc/vintf/manifest/vendor.dolby.media.c2-default-service-dax.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.c2pa-aidl-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.vpp-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.videoservice-service.xml
-vendor/lib64/libSNPESample.so
+vendor/lib64/libSNPESample.so;DISABLE_DEPS
 vendor/lib64/libdolbyclstc.so
 vendor/lib64/libdolbydecoderprocessor.so
 vendor/lib64/libdolbyeglcore.so
@@ -842,7 +842,7 @@ vendor/lib64/libdolbyproxyandroid.so
 vendor/lib64/libdolbyui.so
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
-vendor/lib64/libmialgo.so
+vendor/lib64/libmialgo.so;DISABLE_DEPS
 vendor/lib64/libopencl_loader.so
 vendor/lib64/libqc2vppfilter.so
 vendor/lib64/libqcodec2_base.so
@@ -1401,7 +1401,7 @@ vendor/lib64/libmemhalutils.so
 vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters-ns.so
 vendor/lib64/libmeters.so
-vendor/lib64/libmi266.so
+vendor/lib64/libmi266.so;DISABLE_DEPS
 vendor/lib64/libmisoundfx_aosp_aidl_ext.so;DISABLE_DEPS;SYMLINK=vendor/lib64/soundfx/libmisoundfx_aosp_aidl.so
 vendor/lib64/libnicm_interface.so
 vendor/lib64/libnicm_internal.so
@@ -1506,7 +1506,7 @@ vendor/etc/libnfc-qrd-SN220_38_4MHZ.conf
 vendor/etc/nfcon.pnscr
 vendor/etc/sn100u_nfcon.pnscr
 vendor/lib64/libsn100u_fw.so
-vendor/lib64/libstnfc-auth.so
+vendor/lib64/libstnfc-auth.so;DISABLE_DEPS
 
 # Radio / IMS / data
 vendor/app/IWlanService/IWlanService.apk
@@ -1907,3 +1907,4 @@ vendor/lib64/liblowi_wifihal.so
 vendor/lib64/vendor.xiaomi.cit.wifi-V2-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.wifi.hardware-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.wifi.hostapd-V1-ndk.so
+
