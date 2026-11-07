@@ -128,7 +128,8 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    vendor/qcom/opensource/usb/etc
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8850-common/sm8850-common-vendor.mk)
@@ -166,4 +167,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service \
     vendor.qti.qspa-service
 
+
+# IPA: ipacm and its configs built from hardware/qcom-caf/sm8850/data-ipa-cfg-mgr
+# (configs identical to stock)
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_Filter_cfg.xml \
+    IPACM_cfg.xml
 
