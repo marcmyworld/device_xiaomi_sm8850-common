@@ -149,5 +149,22 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 # VINTF
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
+# WiFi (built from source like other LineageOS Qualcomm devices). Stock loads all three
+# qca_cld3 variants (kiwi_v2, peach_v2, wcn7750) from vendor_dlkm at boot, so the HAL never
+# loads a driver module itself and WIFI_DRIVER_DEFAULT is not set.
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
+WIFI_DRIVER_STATE_OFF := "OFF"
+WIFI_DRIVER_STATE_ON := "ON"
+WIFI_HIDL_FEATURE_AWARE := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+WIFI_FEATURE_HOSTAPD_11AX := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+
 # Inherit the proprietary files
 include vendor/xiaomi/sm8850-common/BoardConfigVendor.mk
