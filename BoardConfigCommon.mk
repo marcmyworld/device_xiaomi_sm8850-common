@@ -56,6 +56,11 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 BOARD_USES_METADATA_PARTITION := true
 
+# Hardware
+# Enables the LineageOS Qualcomm integration; canoe is in its UM_6_12 family
+# (hardware/qcom-caf/common/qcom_defs.mk), which selects hardware/qcom-caf/sm8850.
+BOARD_USES_QCOM_HARDWARE := true
+
 # Kernel
 # Stock boot images (OS3.0.335.0.XPCEUXM): header v4, page size 4096, LZ4 (legacy)
 # ramdisks; the cmdline below is the stock vendor_boot cmdline (device appends swinfo).
