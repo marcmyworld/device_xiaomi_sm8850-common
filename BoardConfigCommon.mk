@@ -20,8 +20,6 @@ AB_OTA_PARTITIONS += \
     system \
     recovery \
     odm
-# Dedicated A/B recovery partition (stock recovery.img: header v4, ramdisk only)
-BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -37,6 +35,26 @@ TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_USES_VULKAN := true
+
+# Filesystem
+# All stock logical partitions are EROFS; userdata is f2fs
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+
+TARGET_COPY_OUT_ODM := odm
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
+
+BOARD_USES_METADATA_PARTITION := true
 
 # Kernel
 # Stock boot images (OS3.0.335.0.XPCEUXM): header v4, page size 4096, LZ4 (legacy)
@@ -94,25 +112,6 @@ BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     vendor \
     vendor_dlkm
 
-# Filesystems: all stock logical partitions are EROFS; userdata is f2fs
-BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-
-TARGET_COPY_OUT_ODM := odm
-TARGET_COPY_OUT_PRODUCT := product
-TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
-TARGET_COPY_OUT_SYSTEM_EXT := system_ext
-TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
-
-BOARD_USES_METADATA_PARTITION := true
-
 # Platform
 TARGET_BOARD_PLATFORM := canoe
 
@@ -125,6 +124,8 @@ TARGET_SYSTEM_DLKM_PROP += $(COMMON_PATH)/system_dlkm.prop
 TARGET_VENDOR_DLKM_PROP += $(COMMON_PATH)/vendor_dlkm.prop
 
 # Recovery
+# Dedicated A/B recovery partition (stock recovery.img: header v4, ramdisk only)
+BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
