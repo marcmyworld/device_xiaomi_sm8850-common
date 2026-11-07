@@ -40,16 +40,16 @@ TARGET_USES_VULKAN := true
 
 # Kernel
 # Stock boot images (OS3.0.335.0.XPCEUXM): header v4, page size 4096, LZ4 (legacy)
-# ramdisks; the cmdline below is the stock vendor_boot cmdline.
+# ramdisks; the cmdline below is the stock vendor_boot cmdline (device appends swinfo).
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 erofs.reserved_pages=64 swinfo.fingerprint=pudding:16/OS3.0.335.0.XPCMI:user bootconfig
+BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 erofs.reserved_pages=64 bootconfig
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_RAMDISK_USE_LZ4 := true
 
-# Kernel - prebuilt stock GKI, DTBs and DTBO from device/xiaomi/pudding-kernel
+# Kernel - prebuilt stock GKI, DTBs and DTBO from the device's kernel repo (KERNEL_PATH)
 # KERNEL_PATH is set by the device BoardConfig.mk (per-device prebuilt kernel repo)
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/kernel
