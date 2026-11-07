@@ -8,6 +8,9 @@ from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
 )
+from extract_utils.fixups_lib import (
+    lib_fixups,
+)
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -31,6 +34,7 @@ module = ExtractUtilsModule(
     'sm8850-common',
     'xiaomi',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 
