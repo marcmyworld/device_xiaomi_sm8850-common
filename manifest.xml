@@ -1,2 +1,8 @@
-<manifest version="None" type="None" target-level="None">
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<!-- Target FCM level of the stock vendor (OS3.0.335.0.XPCEUXM: ro.board.api_level=202504,
+     vendor/etc/vintf/manifest_canoe.xml). The HALs are declared by the VINTF fragments. -->
+<manifest version="1.0" type="device" target-level="202504">
 </manifest>
