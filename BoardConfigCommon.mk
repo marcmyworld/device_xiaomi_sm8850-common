@@ -37,6 +37,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_VULKAN := true
 
 # Filesystem
+TARGET_FS_CONFIG_GEN += $(COMMON_PATH)/config.fs
 # All stock logical partitions are EROFS; userdata is f2fs
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
