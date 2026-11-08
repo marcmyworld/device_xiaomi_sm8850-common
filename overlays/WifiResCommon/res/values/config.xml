@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From stock WifiResTarget.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
+    <item name="config_wifiMultiStaLocalOnlyConcurrencyEnabled" type="bool">true</item>
+    <item name="config_wifiMultiStaMultiInternetConcurrencyEnabled" type="bool">true</item>
+    <item name="config_wifiMultiStaRestrictedConcurrencyEnabled" type="bool">true</item>
+    <item name="config_wifiStaWithBridgedSoftApConcurrencySupported" type="bool">true</item>
+    <item name="config_wifiTwtSupported" type="bool">false</item>
+    <item name="config_wifiSoftApMaxNumberMLDSupported" type="integer">2</item>
+</resources>

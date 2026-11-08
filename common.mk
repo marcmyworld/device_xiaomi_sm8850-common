@@ -47,6 +47,11 @@ PRODUCT_ENABLE_UFFD_GC := true
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay \
+    NfcResCommon \
+    SecureElementResCommon \
+    WifiResCommon
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

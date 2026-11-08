@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From stock SecureElementResTarget_Vendor.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
+    <integer-array name="config_ara_aid_candidate_list_ese">
+    </integer-array>
+    <bool name="secure_element_vintf_enabled">true</bool>
+</resources>
