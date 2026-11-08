@@ -274,7 +274,7 @@ vendor/lib64/libadreno_compiler_cl.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libcameraobserver.so
 vendor/lib64/libcameraopt.so
-vendor/lib64/libcamerapoweroptfeature.so;DISABLE_DEPS;REQUIRED=libtinyxml2,libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk
+vendor/lib64/libcamerapoweroptfeature.so;DISABLE_DEPS;REQUIRED=libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk,libtinyxml2-v36
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libgsl.so
 vendor/lib64/libheichal_qcom.so
@@ -551,7 +551,7 @@ vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
 # same name. Their .rc and VINTF files are renamed (_stock): the replaced source modules
 # still define install rules for the original names.
 vendor/bin/hw/vendor.qti.hardware.display.allocator-service
-vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS;REQUIRED=libtinyxml2-v36,android.hardware.graphics.composer3-V4-ndk,vendor.qti.hardware.display.aiqe-V3-ndk,vendor.qti.hardware.display.composer3-V4-ndk,vendor.qti.hardware.display.config-V13-ndk
 vendor/bin/hw/vendor.qti.hardware.display.demura-service
 vendor/bin/init.qti.display_boot.sh:vendor/bin/init.qti.display_boot_stock.sh
 vendor/etc/init/init.qti.display_boot.rc:vendor/etc/init/init.qti.display_boot_stock.rc
@@ -578,8 +578,8 @@ vendor/lib64/libqdMetaData.so
 vendor/lib64/libqdutils.so
 vendor/lib64/libqservice.so
 vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmclient.so;DISABLE_DEPS
-vendor/lib64/libsdmcore.so;DISABLE_DEPS
+vendor/lib64/libsdmclient.so;DISABLE_DEPS;REQUIRED=libtinyxml2-v36
+vendor/lib64/libsdmcore.so;DISABLE_DEPS;REQUIRED=libtinyxml2-v36
 vendor/lib64/libsdmdal.so;DISABLE_DEPS
 vendor/lib64/libsdmutils.so
 vendor/lib64/vendor.qti.hardware.display.snapalloc-impl.so
@@ -685,15 +685,15 @@ vendor/lib64/libbaa_ChargerModeProtect.so
 vendor/lib64/libbaa_FreqChgFvDown.so
 vendor/lib64/libbaa_LowSohFvDown.so
 vendor/lib64/libbaa_common.so
-vendor/lib64/liboffscreenpoweroptfeature.so;DISABLE_DEPS;REQUIRED=libtinyxml2,libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk
+vendor/lib64/liboffscreenpoweroptfeature.so;DISABLE_DEPS;REQUIRED=libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk,libtinyxml2-v36
 vendor/lib64/libpowercore.so
-vendor/lib64/libpsmoptfeature.so;DISABLE_DEPS;REQUIRED=libtinyxml2,libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk
+vendor/lib64/libpsmoptfeature.so;DISABLE_DEPS;REQUIRED=libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk,libtinyxml2-v36
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libuniperf_config.so
 vendor/lib64/libuniperf_controller.so
 vendor/lib64/libuniperf_log.so
 vendor/lib64/libuniperf_utils.so
-vendor/lib64/libvideooptfeature.so;DISABLE_DEPS;REQUIRED=libtinyxml2,libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk
+vendor/lib64/libvideooptfeature.so;DISABLE_DEPS;REQUIRED=libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk,libtinyxml2-v36
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so
 vendor/lib64/vendor.qti.syshealthmon-V1-ndk.so
@@ -1342,7 +1342,7 @@ vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libdsd2pcm.so
-vendor/lib64/libgamepoweroptfeature.so;DISABLE_DEPS;REQUIRED=libtinyxml2,libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk
+vendor/lib64/libgamepoweroptfeature.so;DISABLE_DEPS;REQUIRED=libdisplayconfig.qti,vendor.qti.hardware.display.config-V18-ndk,libtinyxml2-v36
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblmutils-ns.so;DISABLE_DEPS;REQUIRED=libnl,vendor.qti.hardware.servicetracker@1.0,vendor.qti.hardware.servicetracker@1.1,android.hardware.thermal-V1-ndk
 vendor/lib64/libloadtrusteduiapp.so

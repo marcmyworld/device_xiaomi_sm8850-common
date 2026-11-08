@@ -30,18 +30,34 @@ blob_fixups: blob_fixups_user_type = {
     # builds; point them at the newest frozen version instead of shipping both.
     'vendor/lib64/libqti-perfd.so': blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V12-ndk.so', 'vendor.qti.hardware.display.config-V18-ndk.so'),
+    (
+        'vendor/bin/hw/audiohalservice.qti',
+        'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
+        'vendor/bin/poweropt-service',
+        'vendor/lib64/hw/libaudiocorehal.qti.so',
+        'vendor/lib64/hw/libaudioeffecthal.qti.so',
+        'vendor/lib64/libaudiocloudctrl.so',
+        'vendor/lib64/libdemura_oem_plugin.so',
+        'vendor/lib64/liblearningmodule.so',
+        'vendor/lib64/libpowercore.so',
+        'vendor/lib64/libsdmcore.so',
+        'vendor/lib64/libxlog.so',
+        'vendor/lib64/soundfx/libquasar.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
+    # libsdmclient is BOLT-optimized; newer patchelf moves its program
+    # headers to a file offset that does not match PT_PHDR, and the linker
+    # then finds no PT_DYNAMIC (composer fails to start).
+    'vendor/lib64/libsdmclient.so': blob_fixup()
+        .patchelf_version('0_9')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
     # libcodec2_aidl_noisurface (frameworks/av) uses media.c2 V2; services on
     # libcodec2_aidl stay on V1 like the source library
     'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
         .replace_needed('android.hardware.media.c2-V1-ndk.so', 'android.hardware.media.c2-V2-ndk.so'),
     (
         'vendor/bin/qguard',
-        'vendor/lib64/libcamerapoweroptfeature.so',
-        'vendor/lib64/libgamepoweroptfeature.so',
-        'vendor/lib64/liboffscreenpoweroptfeature.so',
-        'vendor/lib64/libpsmoptfeature.so',
         'vendor/lib64/libqcodec2_utils.so',
-        'vendor/lib64/libvideooptfeature.so',
         'vendor/lib64/libwfddisplayconfig_vendor.so',
     ): blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V18-ndk.so'),
@@ -53,6 +69,15 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libops.so',
     ): blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V7-ndk.so', 'vendor.qti.hardware.display.config-V18-ndk.so'),
+    (
+        'vendor/lib64/libcamerapoweroptfeature.so',
+        'vendor/lib64/libgamepoweroptfeature.so',
+        'vendor/lib64/liboffscreenpoweroptfeature.so',
+        'vendor/lib64/libpsmoptfeature.so',
+        'vendor/lib64/libvideooptfeature.so',
+    ): blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V18-ndk.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
     'vendor/lib64/libdolbyui.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V6-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
