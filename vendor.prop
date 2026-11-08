@@ -282,8 +282,6 @@ ro.vendor.beluga.p=0x3
 ro.vendor.beluga.s=0x900
 ro.vendor.beluga.t=0x240
 ro.vendor.board.family=f-canoe
-ro.vendor.build.ab_ota_partitions=vendor
-ro.vendor.build.version.sdk_full=36.0
 ro.vendor.displayfeature.dump=true
 ro.vendor.miface.started=true
 ro.vendor.mm.vibrator.sys_path=/sys/class/qcom-haptics
@@ -321,4 +319,3 @@ vendor.trustedui_listener.service_start=1
 vendor.wc_transport.force_special_byte=true
 vendor.wv.oemcrypto.debug.enable_external_display_check=false
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
-

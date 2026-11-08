@@ -129,8 +129,6 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
-TARGET_SYSTEM_DLKM_PROP += $(COMMON_PATH)/system_dlkm.prop
-TARGET_VENDOR_DLKM_PROP += $(COMMON_PATH)/vendor_dlkm.prop
 
 # Recovery
 # Dedicated A/B recovery partition (stock recovery.img: header v4, ramdisk only)
