@@ -173,6 +173,30 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service \
     vendor.qti.qspa-service
 
+# Audio: the stock AudioReach stack ships as blobs (see proprietary-files.txt); only
+# ABI-neutral parts are built from source, as in other LineageOS Xiaomi SM8850 trees.
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    audioeffectservice_qti.xml \
+    libagm_compress_plugin \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libpaleventnotifier \
+    libpalipcservice \
+    libsndcardparser \
+    manifest_audiocorehal_default.xml \
+    qtiaudiohalvendorextn
+
+PRODUCT_PACKAGES += \
+    libbundleaidl \
+    libdownmixaidl \
+    libdynamicsprocessingaidl \
+    libloudnessenhanceraidl \
+    libreverbaidl \
+    libvisualizeraidl
+
 
 # IPA: ipacm and its configs built from hardware/qcom-caf/sm8850/data-ipa-cfg-mgr
 # (configs identical to stock)
@@ -190,18 +214,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
-# Stable AIDL interface versions linked by stock vendor blobs with DISABLE_DEPS (already the
-# newest frozen versions, see blob_fixups in extract-files.py for the older ones)
+# Stable AIDL interface versions linked by stock vendor blobs with DISABLE_DEPS (their
+# dependencies are not resolved by the build, so install these explicitly)
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice-V1-ndk \
+    android.hardware.audio.core-V2-ndk \
+    android.hardware.audio.core.sounddose-V1-ndk \
+    android.hardware.audio.core.sounddose-V3-ndk \
+    android.hardware.audio.effect-V3-ndk \
     android.hardware.biometrics.common-V4-ndk \
     android.hardware.camera.common-V1-ndk \
     android.hardware.common-V2-ndk \
+    android.hardware.health-V1-ndk \
     android.hardware.secure_element-V1-ndk \
     android.hardware.security.rkp-V3-ndk \
     android.hardware.security.secureclock-V1-ndk \
     android.hardware.security.sharedsecret-V1-ndk \
     android.hardware.sensors-V3-ndk \
     qti-audio-types-aidl-V1-ndk \
+    vendor.qti.hardware.agm-V1-ndk \
     vendor.qti.hardware.bluetooth.audio-V1-ndk \
-    vendor.qti.hardware.display.postproc-V1-ndk
+    vendor.qti.hardware.display.postproc-V1-ndk \
+    vendor.qti.hardware.pal-V1-ndk
