@@ -169,6 +169,10 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
+    $(COMMON_PATH)/device_framework_matrix.xml
 
 # WiFi (built from source like other LineageOS Qualcomm devices). Stock loads all three
 # qca_cld3 variants (kiwi_v2, peach_v2, wcn7750) from vendor_dlkm at boot, so the HAL never
