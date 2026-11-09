@@ -1,7 +1,8 @@
 # All proprietary files from this list, unless pinned and noted otherwise, are from the
 # Xiaomi 17 (pudding) HyperOS OS3.0.335.0.XPCEUXM (EEA) fastboot ROM.
 # Vendor: Xiaomi/mivendor/mivendor:16/BQ2A.260225.001-BP2A.250705.008/OS3.0.335.0.XPCMI:user/release-keys
-# Common = the vendor partition: Xiaomi builds it once for the series (ro.product.vendor.device=mivendor).
+# Common = the vendor partition: Xiaomi builds it once for the series (ro.product.vendor.device=mivendor),
+# plus the Qualcomm IMS apps from system_ext (see the end of this file).
 # Device-specific files (odm partition) are in device_xiaomi_<device>.
 
 # Audio
@@ -1968,3 +1969,18 @@ vendor/lib64/libdlbpreg.so;DISABLE_DEPS
 vendor/lib64/libmis6.so;DISABLE_DEPS
 vendor/lib64/libspatializerparamstorage.so;DISABLE_DEPS
 vendor/lib64/libswspatializeraidl_ext.so;DISABLE_DEPS
+
+# IMS: the stock Qualcomm IMS apps from system_ext (Xiaomi ships them in its system_ext,
+# not in vendor). They use the Qualcomm telephony framework built from
+# vendor/codeaurora/telephony; qcrilhook and the data channel interface come from stock.
+system_ext/app/ImsDataChannelService/ImsDataChannelService.apk
+system_ext/etc/permissions/qcrilhook.xml
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+system_ext/etc/permissions/vendor.qti.imsdcservice.xml
+system_ext/framework/qcrilhook.jar
+system_ext/framework/vendor.qti.ims.datachannelservice-V3-java.jar
+system_ext/lib64/libSurfaceUtil_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libSurfaceUtil_jni.so
+system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
+system_ext/priv-app/QtiTelephony/QtiTelephony.apk
+system_ext/priv-app/ims/ims.apk
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
