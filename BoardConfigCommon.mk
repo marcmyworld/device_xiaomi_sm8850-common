@@ -69,7 +69,17 @@ BOARD_USES_QCOM_HARDWARE := true
 # ramdisks; the cmdline below is the stock vendor_boot cmdline (device appends swinfo).
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 erofs.reserved_pages=64 bootconfig
+BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 erofs.reserved_pages=64
+# Stock vendor_boot bootconfig (androidboot.hardware=qcom selects init.qcom.rc and the qcom HALs)
+BOARD_BOOTCONFIG := \
+    androidboot.hardware=qcom \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.load_modules_parallel=true \
+    androidboot.hypervisor.protected_vm.supported=true \
+    androidboot.hypervisor.version=gunyah \
+    androidboot.vendor.qspa=true \
+    androidboot.serialconsole=0
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INIT_BOOT_HEADER_VERSION := 4
