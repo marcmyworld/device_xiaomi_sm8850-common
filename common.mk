@@ -218,6 +218,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# Vendor binder: Android 17 only adds vndservicemanager for shipping API level 29 or lower,
+# but the stock vendor services (OS3.0.335.0.XPCEUXM) use /dev/vndbinder
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Telephony: Qualcomm telephony framework built from vendor/codeaurora/telephony; the stock
 # IMS apps in system_ext use it
 PRODUCT_PACKAGES += \
