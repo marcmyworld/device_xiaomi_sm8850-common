@@ -20,6 +20,7 @@ AB_OTA_PARTITIONS += \
     system \
     recovery \
     odm \
+    pvmfw \
     vbmeta \
     vbmeta_system
 
@@ -119,6 +120,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
+BOARD_PVMFWIMAGE_PARTITION_SIZE := 1048576
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 # Super partition (stock lpdump: 13421772800 bytes; groups qti_dynamic_partitions_a/_b,
 # maximum 13411287040 each). mi_ext (Xiaomi-only) is not built.

@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# AVF: pvmfw (stock vbmeta holds its hash descriptor)
+PRODUCT_BUILD_PVMFW_IMAGE := true
+
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 36
 
