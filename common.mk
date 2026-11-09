@@ -175,6 +175,11 @@ PRODUCT_PACKAGES += \
     IPACM_Filter_cfg.xml \
     IPACM_cfg.xml
 
+# Power: QTI power HAL built from vendor/qcom/opensource/power; it uses the stock
+# powerhint.xml and perf HAL (vendor.qti.hardware.perf2)
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
+
 # Thermal: QTI thermal HAL built from hardware/qcom-caf/thermal; stock thermal configs stay
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
