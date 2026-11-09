@@ -264,25 +264,71 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
-# Stable AIDL interface versions linked by stock vendor blobs with DISABLE_DEPS (their
-# dependencies are not resolved by the build, so install these explicitly)
+# Vendor variants of the libraries that stock vendor and odm blobs link. Blobs with
+# DISABLE_DEPS only list them in REQUIRED, which installs the system variant, and the
+# vendor linker namespace cannot load those.
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice-V1-ndk \
-    android.hardware.audio.core-V2-ndk \
-    android.hardware.audio.core.sounddose-V1-ndk \
-    android.hardware.audio.core.sounddose-V3-ndk \
-    android.hardware.audio.effect-V3-ndk \
-    android.hardware.biometrics.common-V4-ndk \
-    android.hardware.camera.common-V1-ndk \
-    android.hardware.common-V2-ndk \
-    android.hardware.health-V1-ndk \
-    android.hardware.secure_element-V1-ndk \
-    android.hardware.security.rkp-V3-ndk \
-    android.hardware.security.secureclock-V1-ndk \
-    android.hardware.security.sharedsecret-V1-ndk \
-    android.hardware.sensors-V3-ndk \
-    qti-audio-types-aidl-V1-ndk \
+    android.frameworks.sensorservice-V1-ndk.vendor \
+    android.hardware.audio.core-V2-ndk.vendor \
+    android.hardware.audio.core-V3-ndk.vendor \
+    android.hardware.audio.core.sounddose-V1-ndk.vendor \
+    android.hardware.audio.core.sounddose-V3-ndk.vendor \
+    android.hardware.audio.effect-V3-ndk.vendor \
+    android.hardware.biometrics.common-V4-ndk.vendor \
+    android.hardware.bluetooth.audio-V5-ndk.vendor \
+    android.hardware.camera.common-V1-ndk.vendor \
+    android.hardware.common-V2-ndk.vendor \
+    android.hardware.contexthub-V3-ndk.vendor \
+    android.hardware.drm-V1-ndk.vendor \
+    android.hardware.graphics.composer3-V4-ndk.vendor \
+    android.hardware.health-V1-ndk.vendor \
+    android.hardware.health@2.0.vendor \
+    android.hardware.health@2.1.vendor \
+    android.hardware.media.c2-V1-ndk.vendor \
+    android.hardware.media.c2-V2-ndk.vendor \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    android.hardware.nfc-V1-ndk.vendor \
+    android.hardware.power@1.2.vendor \
+    android.hardware.radio-V4-ndk.vendor \
+    android.hardware.radio-V5-ndk.vendor \
+    android.hardware.radio.config-V4-ndk.vendor \
+    android.hardware.radio.data-V4-ndk.vendor \
+    android.hardware.radio.messaging-V4-ndk.vendor \
+    android.hardware.radio.modem-V4-ndk.vendor \
+    android.hardware.radio.network-V4-ndk.vendor \
+    android.hardware.radio.sim-V4-ndk.vendor \
+    android.hardware.radio.voice-V4-ndk.vendor \
+    android.hardware.secure_element-V1-ndk.vendor \
+    android.hardware.security.rkp-V3-ndk.vendor \
+    android.hardware.security.secureclock-V1-ndk.vendor \
+    android.hardware.security.sharedsecret-V1-ndk.vendor \
+    android.hardware.sensors-V3-ndk.vendor \
+    android.hardware.thermal-V1-ndk.vendor \
+    android.hardware.thermal@2.0.vendor \
+    android.hardware.wifi-V3-ndk.vendor \
+    android.media.audio.common.types-V4-ndk.vendor \
+    libalsautilsv2.vendor \
+    libcodec2_aidl.vendor \
+    libcodec2_aidl_noisurface.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl@1.1.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libmediautils_vendor.vendor \
+    libmemunreachable.vendor \
+    libtinyalsav2.vendor \
+    qti-audio-types-aidl-V1-ndk.vendor \
     vendor.qti.hardware.agm-V1-ndk \
-    vendor.qti.hardware.bluetooth.audio-V1-ndk \
-    vendor.qti.hardware.display.postproc-V1-ndk \
-    vendor.qti.hardware.pal-V1-ndk
+    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
+    vendor.qti.hardware.display.aiqe-V3-ndk.vendor \
+    vendor.qti.hardware.display.color-V1-ndk.vendor \
+    vendor.qti.hardware.display.composer3-V4-ndk.vendor \
+    vendor.qti.hardware.display.config-V13-ndk.vendor \
+    vendor.qti.hardware.display.config-V18-ndk.vendor \
+    vendor.qti.hardware.display.postproc-V1-ndk.vendor \
+    vendor.qti.hardware.pal-V1-ndk \
+    vendor.qti.hardware.servicetracker@1.0.vendor \
+    vendor.qti.hardware.servicetracker@1.1.vendor \
+    vendor.qti.hardware.systemhelper@1.0.vendor \
+    vendor.qti.hardware.systemhelperaidl-V2-ndk.vendor
