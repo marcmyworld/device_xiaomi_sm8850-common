@@ -236,6 +236,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# The stock IMS apps call android.telephony.TelephonyBaseUtilsStub.isMiuiRom()
+PRODUCT_PACKAGES += \
+    xiaomi-telephony-stub
+
+PRODUCT_BOOT_JARS += \
+    xiaomi-telephony-stub
+
 # Thermal: QTI thermal HAL built from hardware/qcom-caf/thermal; stock thermal configs stay
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
