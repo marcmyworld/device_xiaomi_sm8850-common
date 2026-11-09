@@ -218,6 +218,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# Stock symlinks that point outside the vendor image
+PRODUCT_PACKAGES += \
+    firmware_wlan_kiwi_v2_wlan_mac.bin_symlink \
+    firmware_wlan_peach_v2_wlan_mac.bin_symlink \
+    firmware_wlan_wcn7750_wlan_mac.bin_symlink \
+    firmware_wlanmdsp.otaupdate_symlink \
+    rfs_msm_mpss_readonly_mbnconfig_symlink
+
 # Vendor binder: Android 17 only adds vndservicemanager for shipping API level 29 or lower,
 # but the stock vendor services (OS3.0.335.0.XPCEUXM) use /dev/vndbinder
 PRODUCT_PACKAGES += \

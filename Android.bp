@@ -5,3 +5,39 @@
 
 soong_namespace {
 }
+
+// Stock symlinks that point outside the vendor image (OS3.0.335.0.XPCEUXM)
+install_symlink {
+    name: "firmware_wlan_kiwi_v2_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/kiwi_v2/wlan_mac.bin",
+    symlink_target: "/mnt/vendor/persist/wlan/wlan_mac.bin",
+}
+
+install_symlink {
+    name: "firmware_wlan_peach_v2_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/peach_v2/wlan_mac.bin",
+    symlink_target: "/mnt/vendor/persist/wlan/wlan_mac.bin",
+}
+
+install_symlink {
+    name: "firmware_wlan_wcn7750_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/wcn7750/wlan_mac.bin",
+    symlink_target: "/mnt/vendor/persist/wlan/wlan_mac.bin",
+}
+
+install_symlink {
+    name: "firmware_wlanmdsp.otaupdate_symlink",
+    vendor: true,
+    installed_location: "firmware/wlanmdsp.otaupdate",
+    symlink_target: "/data/vendor/firmware/wlanmdsp.mbn",
+}
+
+install_symlink {
+    name: "rfs_msm_mpss_readonly_mbnconfig_symlink",
+    vendor: true,
+    installed_location: "rfs/msm/mpss/readonly/mbnconfig",
+    symlink_target: "/data/vendor/mbnconfig",
+}
