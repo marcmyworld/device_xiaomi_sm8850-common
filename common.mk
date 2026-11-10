@@ -53,6 +53,19 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
 
+# Mount points of the firmware partitions in the stock fstab (vendor is read-only, so the
+# directories must exist in the image); the modem's rfs link points at modem_firmware as on stock
+$(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
+
+PRODUCT_PACKAGES += \
+    product_vm-system_mountpoint \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
+    vendor_modem_firmware_mountpoint \
+    vendor_soccp_firmware_mountpoint \
+    vendor_vm-system_mountpoint
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \

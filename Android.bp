@@ -6,6 +6,20 @@
 soong_namespace {
 }
 
+// Mount point of the modemfirmware partition (not in hardware/qcom-caf/common)
+mkdir {
+    name: "vendor_modem_firmware_mountpoint",
+    dir: "modem_firmware",
+    vendor: true,
+}
+
+// Empty vm-system directory of the stock product partition (qvirtmgr-vndr.json)
+mkdir {
+    name: "product_vm-system_mountpoint",
+    dir: "vm-system",
+    product_specific: true,
+}
+
 // Stock symlinks that point outside the vendor image (OS3.0.335.0.XPCEUXM)
 install_symlink {
     name: "firmware_wlan_kiwi_v2_wlan_mac.bin_symlink",
