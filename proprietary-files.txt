@@ -1442,6 +1442,7 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay-V1-ndk.so
 vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
 
 # NFC
+vendor/bin/nqnfcinfo
 vendor/etc/libnfc-SN220_19_2MHZ.conf
 vendor/etc/libnfc-SN220_38_4MHZ.conf
 vendor/etc/libnfc-SN300_19_2MHZ.conf
