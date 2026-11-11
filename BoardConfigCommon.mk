@@ -64,6 +64,10 @@ BOARD_USES_METADATA_PARTITION := true
 # (hardware/qcom-caf/common/qcom_defs.mk), which selects hardware/qcom-caf/sm8850.
 BOARD_USES_QCOM_HARDWARE := true
 
+# Build: the stock QTVM proxy client and its Rust libraries (see proprietary-files.txt)
+# can only be copied as files
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Kernel
 # Stock boot images (OS3.0.335.0.XPCEUXM): header v4, page size 4096, LZ4 (legacy)
 # ramdisks; the cmdline below is the stock vendor_boot cmdline (device appends swinfo).

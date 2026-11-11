@@ -1985,3 +1985,28 @@ system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/li
 system_ext/priv-app/QtiTelephony/QtiTelephony.apk
 system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+
+# QTVM proxy client: started by its stock .rc (class early_hal); starts the trusted VMs
+# (ro.vendor.qtvm.auto.start=trustedvm:oemvm) and reports their state (vendor.mitee_vm.*).
+# It and its stock Rust libraries are copied as files: Rust has no stable ABI, and as modules
+# the library names collide with the Rust crates built from source. The libraries go to
+# odm/lib64, which the vendor linker namespace searches before vendor/lib64.
+vendor/bin/vendor.qti.qtvm.proxyclient-service;MAKE_COPY_RULE_ONLY
+vendor/etc/init/vendor.qti.qtvm.proxyclient-service.rc
+vendor/lib64/libaho_corasick.dylib.so:odm/lib64/libaho_corasick.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libandroid_logger.dylib.so:odm/lib64/libandroid_logger.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libanyhow.dylib.so:odm/lib64/libanyhow.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libbinder_rs.dylib.so:odm/lib64/libbinder_rs.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libbitflags.dylib.so:odm/lib64/libbitflags.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libenv_filter.dylib.so:odm/lib64/libenv_filter.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/liblibc.dylib.so:odm/lib64/liblibc.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/liblog_rust.dylib.so:odm/lib64/liblog_rust.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/liblogger.dylib.so:odm/lib64/liblogger.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libmemchr.dylib.so:odm/lib64/libmemchr.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libnix.dylib.so:odm/lib64/libnix.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libregex.dylib.so:odm/lib64/libregex.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libregex_syntax.dylib.so:odm/lib64/libregex_syntax.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/librustutils.dylib.so:odm/lib64/librustutils.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libstd.dylib.so:odm/lib64/libstd.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libvendor_qti_AvfQcvmManager_V1.dylib.so:odm/lib64/libvendor_qti_AvfQcvmManager_V1.dylib.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libzerocopy.dylib.so:odm/lib64/libzerocopy.dylib.so;MAKE_COPY_RULE_ONLY
