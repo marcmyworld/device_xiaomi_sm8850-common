@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# AVF: the virtualization service (com.android.virt with early_virtmgr). The stock
+# AvfQcvmManager starts the trusted VMs (ro.vendor.qtvm.auto.start) through it.
+$(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
+
 # AVF: pvmfw (stock vbmeta holds its hash descriptor)
 PRODUCT_BUILD_PVMFW_IMAGE := true
 
