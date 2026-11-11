@@ -10,6 +10,7 @@ from extract_utils.fixups_blob import (
 )
 from extract_utils.fixups_lib import (
     lib_fixups,
+    lib_fixups_user_type,
 )
 from extract_utils.main import (
     ExtractUtils,
@@ -24,6 +25,18 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
 ]
+
+
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+
+# Libraries shipped in both vendor and system_ext: the vendor module gets a suffix
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    'vendor.qti.qccsyshal_aidl-V1-ndk': lib_fixup_vendor_suffix,
+}
+
 
 blob_fixups: blob_fixups_user_type = {
     # Stock blobs link older versions of stable AIDL interfaces than LineageOS

@@ -1712,7 +1712,7 @@ vendor/lib64/vendor.qti.ims.factoryaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.ims.rcssipaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.latencyaidlservice-V1-ndk.so
-vendor/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so;DISABLE_DEPS;REQUIRED=android.hardware.common.fmq-V1-ndk
+vendor/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so;DISABLE_DEPS;REQUIRED=android.hardware.common.fmq-V1-ndk;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.xiaomi.hardware.radio-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.radio.cdc-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.vsimapp-V1-ndk.so
@@ -2010,3 +2010,22 @@ vendor/lib64/librustutils.dylib.so:odm/lib64/librustutils.dylib.so;MAKE_COPY_RUL
 vendor/lib64/libstd.dylib.so:odm/lib64/libstd.dylib.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libvendor_qti_AvfQcvmManager_V1.dylib.so:odm/lib64/libvendor_qti_AvfQcvmManager_V1.dylib.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libzerocopy.dylib.so:odm/lib64/libzerocopy.dylib.so;MAKE_COPY_RULE_ONLY
+
+# QCC system HAL: the system side of Qualcomm's connectivity client. libqcc_sdk clients in vendor
+# (audio feature stats) register through it; without it they retry forever. Xiaomi ships it in its
+# system_ext. hwservicemanager is disabled on this platform, so the AIDL service runs (its .rc
+# stops it when hwservicemanager is ready). The vendor qccsyshal_aidl-V1-ndk gets a module suffix
+# next to the system_ext one (see lib_fixups).
+system_ext/bin/qccsyshal_aidl-service
+system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc
+system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml
+system_ext/etc/vintf/manifest/vendor.qti.qccsyshal_aidl-service.xml
+system_ext/lib64/libqcc_file_agent_sys.so
+system_ext/lib64/libqccfileservice.so
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so
+system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
+system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so
+system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so
+system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
