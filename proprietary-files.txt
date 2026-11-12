@@ -336,6 +336,12 @@ vendor/lib64/libwfdhdcpcp.so
 vendor/lib64/libwfdhdcpservice_proprietary.so;DISABLE_DEPS;REQUIRED=libclang_rt.ubsan_standalone
 vendor/lib64/libwfdutils_proprietary.so
 
+# DRM - Widevine: Google's Widevine service as a vendor APEX (started on demand) and the
+# Qualcomm OEMCrypto library it loads to reach the TEE
+vendor/apex/com.google.android.widevine.lazy.apex
+vendor/lib64/libcpion.so
+vendor/lib64/liboemcrypto.so
+
 # Display
 vendor/bin/hw/android.hardware.media.c2-mi-service;DISABLE_DEPS;REQUIRED=server_configurable_flags,libaconfig_storage_read_api_cc,libcodec2,libcodec2_hal_common,libcodec2_vndk,libcodec2_aidl,android.hardware.media.c2-V1-ndk
 vendor/bin/hw/vendor.dolby.media.c2-default-service-dax;DISABLE_DEPS;REQUIRED=android.hardware.media.c2@1.0,android.hardware.media.c2@1.1,android.hardware.media.c2@1.2,libcodec2_hidl@1.0,libcodec2_hidl@1.1,libcodec2_hidl@1.2,server_configurable_flags,libaconfig_storage_read_api_cc,libcodec2,libcodec2_hal_common,libcodec2_vndk,libcodec2_aidl,libavservices_minijail,android.hardware.media.c2-V1-ndk
