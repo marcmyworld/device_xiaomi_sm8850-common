@@ -48,9 +48,9 @@ allow hal_camera_default mnt_vendor_file:file { ioctl read getattr lock map open
 allow hal_camera_default mnt_vendor_file:lnk_file { ioctl read getattr lock map open watch watch_reads };
 allow hal_camera_default perf_actuator_device:chr_file { ioctl read write open };
 allow hal_camera_default permission_service:service_manager { find };
-allow hal_camera_default platform_app:binder { call transfer };
-allow hal_camera_default platform_app:binder { transfer };
-allow hal_camera_default platform_app:fd { use };
+allow hal_camera_default platform_app_all:binder { call transfer };
+allow hal_camera_default platform_app_all:binder { transfer };
+allow hal_camera_default platform_app_all:fd { use };
 allow hal_camera_default proc_mem_check:dir { read open search };
 allow hal_camera_default proc_mem_check:file { read getattr open };
 allow hal_camera_default proc_meminfo:file { read getattr open };
