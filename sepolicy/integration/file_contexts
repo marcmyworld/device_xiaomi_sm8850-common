@@ -1,0 +1,3 @@
+# The stock Xiaomi fingerprint HAL modules run inside this service and need the same access
+# as the stock mfp-daemon that hosted them
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi    u:object_r:vendor_mfp-daemon_exec:s0

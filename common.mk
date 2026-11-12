@@ -222,6 +222,13 @@ PRODUCT_PACKAGES += \
     libreverbaidl \
     libvisualizeraidl
 
+# Fingerprint: the hardware/xiaomi AIDL service loads the stock Xiaomi HAL module (V2 ABI)
+# in-process and forwards the framework's under-display touches through libudfpshandler.
+# The stock mfp-daemon waits for HyperOS's SystemUI to signal those touches instead.
+$(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.xiaomi \
+    libudfpshandler
 
 # IPA: ipacm and its configs built from hardware/qcom-caf/sm8850/data-ipa-cfg-mgr
 # (configs identical to stock)
