@@ -1,0 +1,4 @@
+# Stock vendor services (display allocator and composer, camera provider) put themselves into
+# the kernel's reserved memory pool with "writepid /sys/kernel/reserve_pool/pid". HyperOS grants
+# this in its system_ext policy, which is not part of this build.
+allow init sysfs_perf:file w_file_perms;

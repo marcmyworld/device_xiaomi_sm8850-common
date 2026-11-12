@@ -164,7 +164,11 @@ VENDOR_SECURITY_PATCH := 2026-09-01
 
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+# sepolicy/vendor is derived from the stock vendor policy; sepolicy/integration holds the
+# rules that stock blobs need on top of it with LineageOS-built services and platform policy
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(COMMON_PATH)/sepolicy/vendor \
+    $(COMMON_PATH)/sepolicy/integration
 
 # Verified Boot: the stock layout (OS3.0.335.0.XPCEUXM). vbmeta chains boot (3), recovery (1)
 # and vbmeta_system (2: product, system, system_ext) and holds the hashes of the rest;
