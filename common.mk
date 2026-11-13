@@ -76,6 +76,7 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
     NfcResCommon \
     SecureElementResCommon \
+    TelephonyResCommon \
     WifiResCommon
 
 # Partitions
