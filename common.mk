@@ -194,6 +194,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
     android.hardware.usb.gadget-service.qti \
     sensors.dynamic_sensor_hal \
+    sensors.xiaomi.v2 \
     usb_compositions.conf \
     vendor.qti.hardware.memtrack-service \
     vendor.qti.qspa-service
@@ -238,9 +239,16 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 # Power: QTI power HAL built from vendor/qcom/opensource/power; it uses the stock
-# powerhint.xml and perf HAL (vendor.qti.hardware.perf2)
+# powerhint.xml and perf HAL (vendor.qti.hardware.perf2). The device mode hook switches the
+# touch controller's double tap to wake and screen-off fingerprint detection.
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
+
+$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-xiaomi)
+
+# Sensors: the Xiaomi sub-HAL adds the UDFPS long press sensor next to the stock sub-HALs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_ODM)/etc/sensors/hals.conf
 
 # Stock symlinks that point outside the vendor image
 PRODUCT_PACKAGES += \

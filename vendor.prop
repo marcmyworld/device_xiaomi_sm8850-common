@@ -210,6 +210,7 @@ persist.vendor.radio.usb_config=diag,serial_cdev,rmnet,dpl,qdss,adb
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+ro.vendor.sensors.xiaomi.udfps=true
 
 # USB
 vendor.usb.controller=a600000.dwc3
