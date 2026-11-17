@@ -264,7 +264,6 @@ ro.config.notification_sound=OnTheHunt.ogg
 ro.config.ringtone=Ring_Synth_04.ogg
 ro.config.system_vol_steps=15
 ro.config.vc_call_vol_steps=11
-ro.control_privapp_permissions=enforce
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 ro.hardware.keystore_desede=true
