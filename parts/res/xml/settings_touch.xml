@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/touch_settings_title">
+
+    <SwitchPreferenceCompat
+        android:key="touch_polling_enabled"
+        android:title="@string/touch_polling_title"
+        android:summary="@string/touch_polling_summary" />
+
+</PreferenceScreen>

@@ -79,6 +79,11 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon
 
+# Parts: colour modes, touch polling rate and orientation, thermal profile tile, through the
+# stock displayfeature and touchfeature services
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
