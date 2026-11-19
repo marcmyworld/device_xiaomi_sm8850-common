@@ -186,6 +186,7 @@ debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 media.c2.hal.selection=aidl
+ro.media.xml_variant.profiles=_canoe_v2
 
 # Media (Dolby)
 ro.vendor.dolby.dax.version=DAX3_3.14.0.0_r1
