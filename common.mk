@@ -190,7 +190,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service-lazy.clearkey \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery \
-    android.hardware.ir-service.example \
     android.hardware.sensors-service.multihal \
     android.hardware.usb-service.qti \
     android.hardware.usb.gadget-service.qti \

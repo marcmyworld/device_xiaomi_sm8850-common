@@ -1785,6 +1785,13 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
 vendor/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so
 
+# Consumer IR: Xiaomi's build of the AIDL IR service loads the consumerir HAL module, which drives
+# the IR LED through /dev/ir_spi (device_xiaomi_<device> ships the module). The AOSP example service
+# of the same name only logs, so the stock one is installed under its own name.
+vendor/bin/hw/android.hardware.ir-service.example:vendor/bin/hw/android.hardware.ir-service.xiaomi
+vendor/etc/init/android.hardware.ir-service.example.rc:vendor/etc/init/android.hardware.ir-service.xiaomi.rc
+vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml:vendor/etc/vintf/manifest/android.hardware.ir-service.xiaomi.xml
+
 # USB
 vendor/etc/permissions/android.hardware.usb.accessory.xml
 vendor/etc/permissions/android.hardware.usb.host.xml

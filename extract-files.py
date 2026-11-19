@@ -97,6 +97,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib64/libqti-qape-engine.so': blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V12-ndk.so', 'vendor.qti.hardware.display.config-V18-ndk.so'),
+    # The stock IR service is installed under its own name
+    'vendor/etc/init/android.hardware.ir-service.xiaomi.rc': blob_fixup()
+        .regex_replace(r'android\.hardware\.ir-service\.example', 'android.hardware.ir-service.xiaomi'),
     # The stock display_boot service runs the renamed stock script
     'vendor/etc/init/init.qti.display_boot_stock.rc': blob_fixup()
         .regex_replace(r'/vendor/bin/init\.qti\.display_boot\.sh', '/vendor/bin/init.qti.display_boot_stock.sh'),

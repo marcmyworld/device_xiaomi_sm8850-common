@@ -8,6 +8,7 @@ type camlog_device, dev_type;
 type dio_dma_mapper_device, dev_type;
 type gsort_block_device, dev_type;
 type io_monitor_device, dev_type;
+type ir_spi_device, dev_type;
 type micam_sched_device, dev_type;
 type migt_dev, dev_type, mlstrustedobject;
 type minidump_block_device, dev_type;

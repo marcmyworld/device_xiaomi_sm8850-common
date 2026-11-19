@@ -135,6 +135,7 @@
 /dev/dio_dma_mapper_misc  u:object_r:dio_dma_mapper_device:s0
 /dev/goodix_fp						u:object_r:vendor_fingerprint_device:s0
 /dev/io_monitor                                     u:object_r:io_monitor_device:s0
+/dev/ir_spi                                             u:object_r:ir_spi_device:s0
 /dev/metis    u:object_r:migt_dev:s0
 /dev/mi_cam_sched  u:object_r:micam_sched_device:s0
 /dev/mi_display/disp_feature                                               u:object_r:vendor_displayfeature_device:s0
@@ -259,6 +260,7 @@
 /sys/module/qcom_ramdump/parameters/enable_dump_collection u:object_r:sysfs_ramdump:s0
 /sys/powersave(/.*)?                                 u:object_r:sysfs_power_save:s0
 /vendor/bin/exec-debug-diag\.sh u:object_r:vendor_qlogd_exec:s0
+/vendor/bin/hw/android\.hardware\.ir-service\.xiaomi       u:object_r:hal_ir_default_exec:s0
 /vendor/bin/hw/android\.hardware\.media\.c2-mi-service           u:object_r:mediacodec_exec:s0
 /vendor/bin/hw/vendor.xiaomi.hardware.uniperf-service u:object_r:hal_uniperf_default_exec:s0
 /vendor/bin/hw/vendor\.dolby\.dms\.service    u:object_r:hal_aidl_dms_default_exec:s0
