@@ -265,6 +265,7 @@ vendor/etc/pwr/CameraPowerOptFeature.xml
 vendor/etc/vintf/manifest/android.hardware.camera.provider.external.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.dynamiccameraserver.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera.xml
+vendor/framework/androidx.camera.extensions.impl.jar
 vendor/lib64/libCB.so;DISABLE_DEPS;REQUIRED=libnativewindow,libmapperutils,libgralloc.qti,libgralloctypes,vendor.qti.hardware.display.mapper@4.0,android.hardware.graphics.mapper@4.0,vendor.qti.hardware.display.mapperextensions@1.1,vendor.qti.hardware.display.mapper@3.0,android.hardware.graphics.mapper@3.0,android.hardware.graphics.allocator-V2-ndk
 vendor/lib64/libOpenCL.so
 vendor/lib64/libOpenCL_adreno.so
