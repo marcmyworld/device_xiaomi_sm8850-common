@@ -7,4 +7,13 @@
     <!-- The stock Qualcomm IMS service (system_ext/priv-app/ims), as set by the stock
          TelephonyResCommon_Sys.apk -->
     <string name="config_ims_mmtel_package" translatable="false">org.codeaurora.ims</string>
+
+    <!-- From stock TelephonyResCommon_Sys.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
+    <bool name="config_support_rtt">true</bool>
+    <bool name="config_support_simless_emergency_rtt">true</bool>
+    <bool name="csp_enabled">true</bool>
+    <bool name="dtmf_type_enabled">true</bool>
+    <bool name="send_mic_mute_to_AudioManager">true</bool>
+    <bool name="show_call_connected_indicator_preference">true</bool>
+    <bool name="world_phone">true</bool>
 </resources>

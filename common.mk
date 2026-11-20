@@ -73,9 +73,11 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
     NcmTetheringOverlay \
     NfcResCommon \
     SecureElementResCommon \
+    TelecomResCommon \
     TelephonyResCommon \
     WifiResCommon
 
