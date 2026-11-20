@@ -1341,6 +1341,7 @@ vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libTUITAVMInterface.so
 vendor/lib64/libTrustedInputAIDL.so
 vendor/lib64/libTrustedUIAIDL.so;DISABLE_DEPS;REQUIRED=libdmabufheap,libvmmem,vendor.qti.hardware.display.config-V18-ndk
+vendor/lib64/libTxPwrJni.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libav_ozoencoder.so
@@ -1407,6 +1408,7 @@ vendor/lib64/libtlpd_crypto.so
 vendor/lib64/libtlpd_internal.so
 vendor/lib64/libtlpd_logger.so
 vendor/lib64/libtrustedapploader.so
+vendor/lib64/libvndfwk_detect_jni.qti_vendor.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/soundfx/libozoaidl.so;DISABLE_DEPS;REQUIRED=android.hardware.audio.effect-V3-ndk,android.media.audio.common.types-V4-ndk,com.android.ozoaudio.notify-V1-ndk,libalsautilsv2,libav_ozoencoder,libmedia_helper,libnbaio_mono,libtinyalsav2
