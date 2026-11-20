@@ -4,11 +4,79 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Stock overlays in their stock priority order (later ones win): Qualcomm
+         WifiResCommon_Sys.apk (product), WifiResTarget.apk and WifiResTarget_spf.apk (vendor),
+         Xiaomi AospWifiResOverlay.apk (product). Left out: the AOSP security and privacy
+         defaults Xiaomi changes (insecure enterprise configurations, third-party Wi-Fi
+         enable confirmation). -->
+
+    <!-- From stock WifiResCommon_Sys.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
+    <item name="config_disconnectOnlyOnInitialIpReachability" type="bool">true</item>
+    <item name="config_vendor_wifi_softap_owe_supported" type="bool">true</item>
+    <item name="config_wifi6ghzSupport" type="bool">true</item>
+    <item name="config_wifiAllowMultipleNetworksOnSameAwareNdi" type="bool">true</item>
+    <item name="config_wifiApplicationCentricQosPolicyFeatureEnabled" type="bool">true</item>
+    <item name="config_wifiConnectedFrequencyEnhancementEnabled" type="bool">true</item>
+    <item name="config_wifiEnablePartialInitialScan" type="bool">true</item>
+    <item name="config_wifiForcedSoftApRestartWhenCountryCodeChanged" type="bool">false</item>
+    <item name="config_wifiNetworkCentricQosPolicyFeatureEnabled" type="bool">true</item>
+    <item name="config_wifiSoftApDynamicCountryCodeUpdateSupported" type="bool">true</item>
+    <item name="config_wifiSoftap6ghzSupported" type="bool">true</item>
+    <item name="config_wifiSoftapAcsIncludeDfs" type="bool">true</item>
+    <item name="config_wifiSoftapAutoUpgradeToBridgedConfigWhenSupported" type="bool">false</item>
+    <item name="config_wifiSoftapHeSuBeamformeeSupported" type="bool">true</item>
+    <item name="config_wifiSoftapHeSuBeamformerSupported" type="bool">true</item>
+    <item name="config_wifiSoftapOweSupported" type="bool">true</item>
+    <item name="config_wifiSoftapOweTransitionSupported" type="bool">true</item>
+    <item name="config_wifiStaDynamicCountryCodeUpdateSupported" type="bool">true</item>
+    <item name="config_wifi_background_scan_support" type="bool">true</item>
+    <item name="config_wifi_p2p_mac_randomization_supported" type="bool">true</item>
+    <item name="config_wifiBssidBlocklistMonitorApUnableToHandleNewStaThreshold" type="integer">3</item>
+    <item name="config_wifiDelayDisconnectOnImsLostMs" type="integer">1000</item>
+    <item name="config_wifiDisableReasonByWrongPasswordThreshold" type="integer">2</item>
+    <item name="config_wifiHardwareSoftapMaxClientCount" type="integer">32</item>
+
     <!-- From stock WifiResTarget.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
-    <item name="config_wifiMultiStaLocalOnlyConcurrencyEnabled" type="bool">true</item>
-    <item name="config_wifiMultiStaMultiInternetConcurrencyEnabled" type="bool">true</item>
-    <item name="config_wifiMultiStaRestrictedConcurrencyEnabled" type="bool">true</item>
     <item name="config_wifiStaWithBridgedSoftApConcurrencySupported" type="bool">true</item>
-    <item name="config_wifiTwtSupported" type="bool">false</item>
     <item name="config_wifiSoftApMaxNumberMLDSupported" type="integer">2</item>
+
+    <!-- From stock WifiResTarget_spf.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
+    <item name="config_wifi5ghzSupport" type="bool">true</item>
+    <item name="config_wifiBridgedSoftApSupported" type="bool">true</item>
+    <item name="config_wifiDriverSupportedNl80211RegChangedEvent" type="bool">true</item>
+    <item name="config_wifiSoftap5ghzSupported" type="bool">true</item>
+    <item name="config_wifiUseHalApiToDisableFwRoaming" type="bool">true</item>
+    <item name="config_wifi_softap_acs_supported" type="bool">true</item>
+
+    <!-- From stock AospWifiResOverlay.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
+    <string-array name="config_wifiCharsetsForSsidTranslation">
+        <item>all,GBK</item>
+    </string-array>
+    <integer-array name="config_wifiDisconnectedScanIntervalScheduleSec">
+        <item>20</item>
+    </integer-array>
+    <item name="config_wifiDisableUnwantedNetworkOnLowRssi" type="bool">true</item>
+    <item name="config_wifiEnableApfOnNonPrimarySta" type="bool">true</item>
+    <item name="config_wifiEnableLinkedNetworkRoaming" type="bool">true</item>
+    <item name="config_wifiMultiStaLocalOnlyConcurrencyEnabled" type="bool">false</item>
+    <item name="config_wifiMultiStaMultiInternetConcurrencyEnabled" type="bool">true</item>
+    <item name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled" type="bool">false</item>
+    <item name="config_wifiMultiStaRestrictedConcurrencyEnabled" type="bool">false</item>
+    <item name="config_wifiP2pGoIpAddressAllocationInEapolFrames" type="bool">true</item>
+    <item name="config_wifiSaeH2eSupported" type="bool">true</item>
+    <item name="config_wifiSaeUpgradeOffloadEnabled" type="bool">true</item>
+    <item name="config_wifiSoftapAutoAppendLowerBandsToBandConfigurationEnabled" type="bool">true</item>
+    <item name="config_wifiSoftapIeee80211axSupported" type="bool">true</item>
+    <item name="config_wifiSoftapIeee80211beSupported" type="bool">false</item>
+    <item name="config_wifiTwtSupported" type="bool">false</item>
+    <item name="config_wifi_connected_mac_randomization_supported" type="bool">true</item>
+    <item name="config_wifi_only_link_same_credential_configurations" type="bool">true</item>
+    <item name="config_wifi_softap_ieee80211ac_supported" type="bool">true</item>
+    <item name="config_wifi_softap_sae_supported" type="bool">true</item>
+    <item name="config_disconnectedP2pIfaceLowPriorityTimeoutMs" type="integer">0</item>
+    <item name="config_wifiDisableReasonAssociationRejectionThreshold" type="integer">5</item>
+    <item name="config_wifiDisableReasonAuthenticationFailureThreshold" type="integer">5</item>
+    <item name="config_wifiMaxNumWifiConfigurations" type="integer">1000</item>
+    <item name="config_wifiPnoScanIntervalMultiplier" type="integer">6</item>
+    <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,16777216,262144,524288,16777216</string>
 </resources>
