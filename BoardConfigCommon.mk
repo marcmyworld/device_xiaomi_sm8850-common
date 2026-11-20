@@ -138,8 +138,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL: the stock Qualcomm qcrild provides the radio HALs
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2026-09-01
+# Security patch level: the boot image carries the stock prebuilt kernel, so it reports the
+# stock patch level like the vendor image
+BOOT_SECURITY_PATCH := 2026-09-01
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
