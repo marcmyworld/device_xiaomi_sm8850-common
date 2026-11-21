@@ -29,8 +29,10 @@ allow hal_bluetooth_default vendor_bt_data_file:file { read write create getattr
 allow hal_bluetooth_default vendor_bt_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
 allow hal_bluetooth_default vendor_data_file:dir { write add_name };
 allow hal_bluetooth_default vendor_data_file:file { read write create getattr append open };
-allow hal_bluetooth_default vendor_debugfs_bt_tracing:dir { ioctl read getattr lock open watch watch_reads search };
-allow hal_bluetooth_default vendor_debugfs_bt_tracing:file { ioctl read getattr lock map open watch watch_reads };
+userdebug_or_eng(`
+    allow hal_bluetooth_default vendor_debugfs_bt_tracing:dir { ioctl read getattr lock open watch watch_reads search };
+    allow hal_bluetooth_default vendor_debugfs_bt_tracing:file { ioctl read getattr lock map open watch watch_reads };
+')
 allow hal_bluetooth_default vendor_diag_device:chr_file { ioctl getattr };
 allow hal_bluetooth_default vendor_diag_device:chr_file { read write open };
 allow hal_bluetooth_default vendor_fm_radio_device:chr_file { ioctl read getattr lock map open watch watch_reads };
