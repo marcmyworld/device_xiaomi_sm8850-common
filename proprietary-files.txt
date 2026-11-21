@@ -1417,7 +1417,7 @@ vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/soundfx/libozoaidl.so;DISABLE_DEPS;REQUIRED=android.hardware.audio.effect-V3-ndk,android.media.audio.common.types-V4-ndk,com.android.ozoaudio.notify-V1-ndk,libalsautilsv2,libav_ozoencoder,libmedia_helper,libnbaio_mono,libtinyalsav2
 vendor/lib64/vendor.qti.MemHal-V1-ndk.so
-vendor/lib64/vendor.qti.diaghal-V1-ndk.so
+vendor/lib64/vendor.qti.diaghal-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.alarm-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.c2pa-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.capabilityconfigstore-V1-ndk.so
@@ -1686,7 +1686,7 @@ vendor/lib64/vendor.libdpmfdmgr.so
 vendor/lib64/vendor.libdpmframework.so
 vendor/lib64/vendor.libdpmtcm.so
 vendor/lib64/vendor.libmwqemiptablemgr.so
-vendor/lib64/vendor.qti.ImsRtpService-V2-ndk.so
+vendor/lib64/vendor.qti.ImsRtpService-V2-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.ImsRtpService-aidl-Impl.so
 vendor/lib64/vendor.qti.data.factoryservice-V2-ndk.so
 vendor/lib64/vendor.qti.data.mwqemaidlservice-V1-ndk.so
@@ -2050,3 +2050,21 @@ system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so
 system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so
 system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
+
+# IMS Video Telephony (VT)
+system_ext/bin/imsvtdaemon
+system_ext/etc/init/imsvtdaemon.rc
+system_ext/etc/seccomp_policy/imsvtdaemon.policy
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+system/lib64/vendor.qti.diaghal-V1-ndk.so:system_ext/lib64/vendor.qti.diaghal-V1-ndk.so
+system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/lib64/vendor.qti.ImsVtService-ndk.so
+system_ext/framework/vendor.qti.ImsVtService-java.jar

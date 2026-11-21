@@ -34,6 +34,8 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 # Libraries shipped in both vendor and system_ext: the vendor module gets a suffix
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    'vendor.qti.diaghal-V1-ndk': lib_fixup_vendor_suffix,
+    'vendor.qti.ImsRtpService-V2-ndk': lib_fixup_vendor_suffix,
     'vendor.qti.qccsyshal_aidl-V1-ndk': lib_fixup_vendor_suffix,
 }
 
@@ -108,6 +110,16 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
         .add_needed('libaudioutils_shim.so')
         .add_needed('libbluetooth_audio_session_aidl_shim.so'),
+    # Bypass fatal NetID check and retry timeout for autonomous IMS PDN
+    'vendor/lib64/lib-imsdpl.so': blob_fixup()
+        .sig_replace(
+            '3f 23 03 d5 ff c3 01 d1 fd 7b 02 a9 fa 67 03 a9 f8 5f 04 a9 f6 57 05 a9 f4 4f 06 a9 fd 83 00 91 55 d0 3b d5',
+            '41 00 00 b4 3f 00 00 f9 20 00 80 52 c0 03 5f d6 f8 5f 04 a9 f6 57 05 a9 f4 4f 06 a9 fd 83 00 91 55 d0 3b d5',
+        )
+        .sig_replace(
+            '99 15 00 b4 f7 0b 40 b9',
+            'f7 0b 40 b9 59 08 00 b4',
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
