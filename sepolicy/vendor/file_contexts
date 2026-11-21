@@ -138,6 +138,7 @@
 /dev/ir_spi                                             u:object_r:ir_spi_device:s0
 /dev/metis    u:object_r:migt_dev:s0
 /dev/mi_cam_sched  u:object_r:micam_sched_device:s0
+/dev/disp_feature                                                       u:object_r:vendor_displayfeature_device:s0
 /dev/mi_display/disp_feature                                               u:object_r:vendor_displayfeature_device:s0
 /dev/mi_display/disp_log                                                   u:object_r:vendor_displaylog_device:s0
 /dev/mifp_id                                            u:object_r:vendor_fingerprint_device:s0

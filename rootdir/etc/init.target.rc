@@ -457,6 +457,14 @@ on early-boot
     write /sys/kernel/cnss/recovery 3
 
 on boot
+    # DisplayFeature
+    mkdir /dev/mi_display 0755 root graphics
+    chmod 0666 /dev/disp_feature
+    symlink /dev/disp_feature /dev/mi_display/disp_feature
+    chmod 0666 /dev/mi_display/disp_feature
+    chown root graphics /dev/disp_feature
+    chown root graphics /dev/mi_display/disp_feature
+
     write /dev/cpuset/audio-app/cpus 0-7
     # Add a cpuset for the camera daemon
     # We want all cores for camera
