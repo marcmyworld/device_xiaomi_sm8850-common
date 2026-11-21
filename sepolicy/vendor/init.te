@@ -462,7 +462,9 @@ allow init vendor_dcfd:process { transition };
 allow init vendor_dcfd_exec:file { read getattr map execute open };
 allow init vendor_dcp_file:dir { mounton };
 allow init vendor_dcp_file:filesystem { mount unmount relabelfrom relabelto };
-allow init vendor_debugfs_bt_tracing:dir { mounton };
+userdebug_or_eng(`
+    allow init vendor_debugfs_bt_tracing:dir { mounton };
+')
 allow init vendor_dlsc:process { siginh rlimitinh };
 allow init vendor_dlsc:process { transition };
 allow init vendor_dlsc_exec:file { read getattr map execute open };
