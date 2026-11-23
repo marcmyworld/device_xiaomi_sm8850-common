@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/esim_settings_title">
+
+    <SwitchPreferenceCompat
+        android:key="esim_enabled"
+        android:title="@string/esim_enable_title"
+        android:summary="@string/esim_enable_summary" />
+
+</PreferenceScreen>
