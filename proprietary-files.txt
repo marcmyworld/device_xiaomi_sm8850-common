@@ -149,6 +149,7 @@ vendor/lib64/lib_bt_lhdc.so
 vendor/lib64/lib_bt_mihc.so
 vendor/lib64/libadm.so
 vendor/lib64/libadsprpc.so
+vendor/lib64/libagmmixer.so
 vendor/lib64/libarmemlog.so
 vendor/lib64/libaudiocloudctrl.so
 vendor/lib64/libaudiofeaturestats.so
@@ -242,6 +243,7 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth.xpanprovider-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libshsc.so
+vendor/lib64/libsoc_helper.so
 vendor/lib64/libxml.so
 vendor/lib64/libxpan_wifi_hal.so
 vendor/lib64/vendor.qti.hardware.bluetooth.xpanprovider-V1-ndk.so
@@ -1803,11 +1805,6 @@ vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml:vendor/etc/vin
 # USB
 vendor/etc/permissions/android.hardware.usb.accessory.xml
 vendor/etc/permissions/android.hardware.usb.host.xml
-
-# Vibrator
-vendor/lib64/libagmmixer.so
-vendor/lib64/libsoc_helper.so
-vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon

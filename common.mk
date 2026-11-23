@@ -304,6 +304,15 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
+# Vibrator: QTI vibrator HAL built from vendor/qcom/opensource/vibrator. It plays the
+# effects and primitives of the qcom-hv-haptics driver at the requested strength; the stock
+# Xiaomi service drops the scale of composed primitives. Stock HapticsPolicy.xml stays.
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
 # Vendor variants of the libraries that stock vendor and odm blobs link. Blobs with
 # DISABLE_DEPS only list them in REQUIRED, which installs the system variant, and the
 # vendor linker namespace cannot load those.
