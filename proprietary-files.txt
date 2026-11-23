@@ -1,9 +1,7 @@
-# All proprietary files from this list, unless pinned and noted otherwise, are from the
-# Xiaomi 17 (pudding) HyperOS OS3.0.335.0.XPCEUXM (EEA) fastboot ROM.
-# Vendor: Xiaomi/mivendor/mivendor:16/BQ2A.260225.001-BP2A.250705.008/OS3.0.335.0.XPCMI:user/release-keys
-# Common = the vendor partition: Xiaomi builds it once for the series (ro.product.vendor.device=mivendor),
-# plus the Qualcomm IMS apps from system_ext (see the end of this file).
-# Device-specific files (odm partition) are in device_xiaomi_<device>.
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
 
 # Audio
 vendor/bin/hw/vendor.dolby.dms.service
@@ -339,8 +337,7 @@ vendor/lib64/libwfdhdcpcp.so
 vendor/lib64/libwfdhdcpservice_proprietary.so;DISABLE_DEPS;REQUIRED=libclang_rt.ubsan_standalone
 vendor/lib64/libwfdutils_proprietary.so
 
-# DRM - Widevine: Google's Widevine service as a vendor APEX (started on demand) and the
-# Qualcomm OEMCrypto library it loads to reach the TEE
+# DRM - Widevine
 vendor/apex/com.google.android.widevine.lazy.apex
 vendor/lib64/libcpion.so
 vendor/lib64/liboemcrypto.so
@@ -559,11 +556,7 @@ vendor/lib64/vendor.xiaomi.hardware.videoservice-V6-ndk.so
 vendor/lib64/vendor.xiaomi.sensor.camera-V1-ndk.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
 
-# Display: the stock Qualcomm display stack. Xiaomi's SDM is a different version than
-# hardware/qcom-caf/sm8850/display (HWC extensions, QDCM, mi_display nodes), so the composer,
-# allocator, mapper and their libraries come from stock and replace the source modules of the
-# same name. Their .rc and VINTF files are renamed (_stock): the replaced source modules
-# still define install rules for the original names.
+# Display
 vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS;REQUIRED=libtinyxml2-v36,android.hardware.graphics.composer3-V4-ndk,vendor.qti.hardware.display.aiqe-V3-ndk,vendor.qti.hardware.display.composer3-V4-ndk,vendor.qti.hardware.display.config-V13-ndk
 vendor/bin/hw/vendor.qti.hardware.display.demura-service
@@ -619,7 +612,7 @@ vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 
-# Health / power
+# Power
 vendor/bin/batterysecret
 vendor/bin/hw/android.hardware.powerstats-service.qti
 vendor/bin/hw/vendor.xiaomi.aidl.mipowerhal@1.0-service
@@ -717,7 +710,7 @@ vendor/lib64/vendor.xiaomi.hardware.batteryantiaging-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.swap-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.uniperf-V1-ndk.so
 
-# Keymint / security
+# KeyMint
 vendor/bin/hlosminkdaemon
 vendor/bin/hw/android.hardware.gatekeeper-rust-service-qti
 vendor/bin/hw/android.hardware.secure_element-service.qti
@@ -1474,7 +1467,7 @@ vendor/etc/sn100u_nfcon.pnscr
 vendor/lib64/libsn100u_fw.so
 vendor/lib64/libstnfc-auth.so;DISABLE_DEPS
 
-# Radio / IMS / data
+# Radio
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
 vendor/bin/embmsslServer
@@ -1795,9 +1788,7 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
 vendor/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so
 
-# Consumer IR: Xiaomi's build of the AIDL IR service loads the consumerir HAL module, which drives
-# the IR LED through /dev/ir_spi (device_xiaomi_<device> ships the module). The AOSP example service
-# of the same name only logs, so the stock one is installed under its own name.
+# Consumer IR
 vendor/bin/hw/android.hardware.ir-service.example:vendor/bin/hw/android.hardware.ir-service.xiaomi
 vendor/etc/init/android.hardware.ir-service.example.rc:vendor/etc/init/android.hardware.ir-service.xiaomi.rc
 vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml:vendor/etc/vintf/manifest/android.hardware.ir-service.xiaomi.xml
@@ -1876,13 +1867,10 @@ vendor/lib64/vendor.xiaomi.cit.wifi-V2-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.wifi.hardware-V1-ndk.so;DISABLE_DEPS;REQUIRED=android.hardware.wifi-V3-ndk
 vendor/lib64/vendor.xiaomi.hardware.wifi.hostapd-V1-ndk.so
 
-# Sound trigger HAL: not part of the SM8850 Qualcomm sources (st-hal-ar is not imported), so
-# keep the stock library
+# Sound trigger
 vendor/lib64/hw/libsoundtriggerhal.qti.so
 
-# Audio: stock AudioReach stack (audio HAL service, PAL, AGM, PAL device/stream/session
-# libraries, Codec2 audio and Xiaomi effects). The PAL in hardware/qcom-caf/sm8850 is a
-# different version than the stock one, so its C++ users have to come from stock too.
+# Audio
 vendor/bin/audioadsprpcd;DISABLE_DEPS
 vendor/bin/hw/audiohalservice.qti;DISABLE_DEPS
 vendor/etc/vintf/manifest/Manifest_IAGM.xml:vendor/etc/vintf/manifest/Manifest_IAGM_stock.xml
@@ -1989,9 +1977,7 @@ vendor/lib64/libmis6.so;DISABLE_DEPS
 vendor/lib64/libspatializerparamstorage.so;DISABLE_DEPS
 vendor/lib64/libswspatializeraidl_ext.so;DISABLE_DEPS
 
-# IMS: the stock Qualcomm IMS apps from system_ext (Xiaomi ships them in its system_ext,
-# not in vendor). They use the Qualcomm telephony framework built from
-# vendor/codeaurora/telephony; qcrilhook and the data channel interface come from stock.
+# IMS
 system_ext/app/ImsDataChannelService/ImsDataChannelService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
@@ -2004,11 +1990,7 @@ system_ext/priv-app/QtiTelephony/QtiTelephony.apk
 system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
-# QTVM proxy client: started by its stock .rc (class early_hal); starts the trusted VMs
-# (ro.vendor.qtvm.auto.start=trustedvm:oemvm) and reports their state (vendor.mitee_vm.*).
-# It and its stock Rust libraries are copied as files: Rust has no stable ABI, and as modules
-# the library names collide with the Rust crates built from source. The libraries go to
-# odm/lib64, which the vendor linker namespace searches before vendor/lib64.
+# QTVM proxy client
 vendor/bin/vendor.qti.qtvm.proxyclient-service;MAKE_COPY_RULE_ONLY
 vendor/etc/init/vendor.qti.qtvm.proxyclient-service.rc
 vendor/lib64/libaho_corasick.dylib.so:odm/lib64/libaho_corasick.dylib.so;MAKE_COPY_RULE_ONLY
@@ -2029,11 +2011,7 @@ vendor/lib64/libstd.dylib.so:odm/lib64/libstd.dylib.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libvendor_qti_AvfQcvmManager_V1.dylib.so:odm/lib64/libvendor_qti_AvfQcvmManager_V1.dylib.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libzerocopy.dylib.so:odm/lib64/libzerocopy.dylib.so;MAKE_COPY_RULE_ONLY
 
-# QCC system HAL: the system side of Qualcomm's connectivity client. libqcc_sdk clients in vendor
-# (audio feature stats) register through it; without it they retry forever. Xiaomi ships it in its
-# system_ext. hwservicemanager is disabled on this platform, so the AIDL service runs (its .rc
-# stops it when hwservicemanager is ready). The vendor qccsyshal_aidl-V1-ndk gets a module suffix
-# next to the system_ext one (see lib_fixups).
+# QCC system HAL
 system_ext/bin/qccsyshal_aidl-service
 system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc
 system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml

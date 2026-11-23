@@ -4,11 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Stock overlays in their stock priority order (later ones win): Qualcomm
-         WifiResCommon_Sys.apk (product), WifiResTarget.apk and WifiResTarget_spf.apk (vendor),
-         Xiaomi AospWifiResOverlay.apk (product). Left out: the AOSP security and privacy
-         defaults Xiaomi changes (insecure enterprise configurations, third-party Wi-Fi
-         enable confirmation). -->
 
     <!-- From stock WifiResCommon_Sys.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
     <item name="config_disconnectOnlyOnInitialIpReachability" type="bool">true</item>

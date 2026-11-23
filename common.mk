@@ -3,14 +3,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
+# APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Qualcomm common product configuration (remote file system links for the modem and DSPs,
-# vendor linker configuration)
+# Qualcomm common
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 PRODUCT_PACKAGES += \
@@ -38,11 +37,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# AVF: the virtualization service (com.android.virt with early_virtmgr). The stock
-# AvfQcvmManager starts the trusted VMs (ro.vendor.qtvm.auto.start) through it.
+# Virtualization
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
-# AVF: pvmfw (stock vbmeta holds its hash descriptor)
+# Virtualization - pvmfw
 PRODUCT_BUILD_PVMFW_IMAGE := true
 
 # API levels
@@ -57,8 +55,7 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
 
-# Mount points of the firmware partitions in the stock fstab (vendor is read-only, so the
-# directories must exist in the image); the modem's rfs link points at modem_firmware as on stock
+# Firmware mountpoints
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
 
 PRODUCT_PACKAGES += \
@@ -81,8 +78,7 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon
 
-# Parts: colour modes, touch polling rate and orientation, thermal profile tile, through the
-# stock displayfeature and touchfeature services
+# Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
 
@@ -191,7 +187,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
-# HALs built from source (stock binaries share these module names)
+# Source-built HALs
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-V1-external-service \
     android.hardware.drm-service-lazy.clearkey \
@@ -206,8 +202,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service \
     vendor.qti.qspa-service
 
-# Audio: the stock AudioReach stack ships as blobs (see proprietary-files.txt); only
-# ABI-neutral parts are built from source, as in other LineageOS Xiaomi SM8850 trees.
+# Audio
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -231,34 +226,29 @@ PRODUCT_PACKAGES += \
     libreverbaidl \
     libvisualizeraidl
 
-# Fingerprint: the hardware/xiaomi AIDL service loads the stock Xiaomi HAL module (V2 ABI)
-# in-process and forwards the framework's under-display touches through libudfpshandler.
-# The stock mfp-daemon waits for HyperOS's SystemUI to signal those touches instead.
+# Fingerprint
 $(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
     libudfpshandler
 
-# IPA: ipacm and its configs built from hardware/qcom-caf/sm8850/data-ipa-cfg-mgr
-# (configs identical to stock)
+# IPA
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_Filter_cfg.xml \
     IPACM_cfg.xml
 
-# Power: QTI power HAL built from vendor/qcom/opensource/power; it uses the stock
-# powerhint.xml and perf HAL (vendor.qti.hardware.perf2). The device mode hook switches the
-# touch controller's double tap to wake and screen-off fingerprint detection.
+# Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
 $(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-xiaomi)
 
-# Sensors: the Xiaomi sub-HAL adds the UDFPS long press sensor next to the stock sub-HALs
+# Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_ODM)/etc/sensors/hals.conf
 
-# Stock symlinks that point outside the vendor image
+# Symlinks
 PRODUCT_PACKAGES += \
     firmware_wlan_kiwi_v2_wlan_mac.bin_symlink \
     firmware_wlan_peach_v2_wlan_mac.bin_symlink \
@@ -266,13 +256,12 @@ PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
     rfs_msm_mpss_readonly_mbnconfig_symlink
 
-# Vendor binder: Android 17 only adds vndservicemanager for shipping API level 29 or lower,
-# but the stock vendor services (OS3.0.335.0.XPCEUXM) use /dev/vndbinder
+# Vendor binder
+# vndservicemanager required for stock vendor services on Android 17
 PRODUCT_PACKAGES += \
     vndservicemanager
 
-# Telephony: Qualcomm telephony framework built from vendor/codeaurora/telephony; the stock
-# IMS apps in system_ext use it
+# Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
     extphonelib-product \
@@ -293,29 +282,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# The stock IMS apps call android.telephony.TelephonyBaseUtilsStub.isMiuiRom()
+# Telephony stub for IMS
 PRODUCT_PACKAGES += \
     xiaomi-telephony-stub
 
 PRODUCT_BOOT_JARS += \
     xiaomi-telephony-stub
 
-# Thermal: QTI thermal HAL built from hardware/qcom-caf/thermal; stock thermal configs stay
+# Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
-# Vibrator: QTI vibrator HAL built from vendor/qcom/opensource/vibrator. It plays the
-# effects and primitives of the qcom-hv-haptics driver at the requested strength; the stock
-# Xiaomi service drops the scale of composed primitives. Stock HapticsPolicy.xml stays.
+# Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
-# Vendor variants of the libraries that stock vendor and odm blobs link. Blobs with
-# DISABLE_DEPS only list them in REQUIRED, which installs the system variant, and the
-# vendor linker namespace cannot load those.
+# Vendor variants of libraries required by stock blobs with DISABLE_DEPS
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice-V1-ndk.vendor \
     android.hardware.audio.core-V2-ndk.vendor \
