@@ -47,6 +47,11 @@ debug.sf.disable_backpressure=1
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.hidl_dev_service=true
 
+# Remote key provisioning
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
+remote_provisioning.strongbox.rkp_only=true
+
 # Wi-Fi
 
 # Miscellaneous
