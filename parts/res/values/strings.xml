@@ -17,13 +17,14 @@
 
     <!-- eSIM -->
     <string name="esim_settings_title">eSIM</string>
-    <string name="esim_settings_summary">Use the eSIM in SIM slot 2</string>
+    <string name="esim_settings_summary">Manage eSIM support for the device</string>
+    <string name="esim_top_intro_summary">Use eSIM to connect to mobile networks without a physical SIM card. Enabling eSIM switches SIM slot 2 from the physical card tray to the internal eSIM chip.</string>
     <string name="esim_enable_title">Use eSIM</string>
-    <string name="esim_enable_summary">SIM slot 2 uses the eSIM instead of the second SIM card in the tray</string>
-    <string name="esim_unavailable_summary">This device has no SIM slot that can switch to the eSIM</string>
-    <string name="esim_in_use_title">eSIM in use</string>
-    <string name="esim_in_use_message">Turn off your eSIM profile in the SIM settings before switching back to the SIM card</string>
-    <string name="esim_switch_failed">Could not switch SIM slot 2</string>
+    <string name="esim_enable_summary">Switch SIM slot 2 to use eSIM instead of the physical nano-SIM card</string>
+    <string name="esim_unavailable_summary">No switchable eSIM slot is available on this device</string>
+    <string name="esim_in_use_title">eSIM profile is active</string>
+    <string name="esim_in_use_message">Turn off your active eSIM profile in SIM settings before switching back to the physical SIM card.</string>
+    <string name="esim_switch_failed">Failed to switch SIM slot 2</string>
 
     <!-- Thermal Profile -->
     <string name="thermalprofile_title">Thermal profile</string>

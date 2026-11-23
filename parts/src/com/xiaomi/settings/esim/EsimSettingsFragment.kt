@@ -45,7 +45,11 @@ class EsimSettingsFragment : PreferenceFragment(), Preference.OnPreferenceChange
         val available = controller.getSwitchableSlot() >= 0
         preference.isEnabled = available
         preference.isChecked = available && controller.isEsimEnabled()
-        if (!available) preference.setSummary(R.string.esim_unavailable_summary)
+        if (!available) {
+            preference.setSummary(R.string.esim_unavailable_summary)
+        } else {
+            preference.setSummary(R.string.esim_enable_summary)
+        }
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any): Boolean {

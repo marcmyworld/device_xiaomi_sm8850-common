@@ -53,6 +53,7 @@
             android:name=".esim.EsimSettingsActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
+            android:icon="@drawable/ic_esim"
             android:label="@string/esim_settings_title"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
@@ -61,6 +62,12 @@
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.wireless" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_esim" />
+            <meta-data
+                android:name="com.android.settings.icon_tintable"
+                android:value="true" />
             <meta-data
                 android:name="com.android.settings.summary"
                 android:value="@string/esim_settings_summary" />
