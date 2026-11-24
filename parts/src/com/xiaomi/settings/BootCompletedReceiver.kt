@@ -12,6 +12,7 @@ import android.content.Intent
 import android.os.UserHandle
 import android.util.Log
 import com.xiaomi.settings.display.ColorModeService
+import com.xiaomi.settings.doze.PickupService
 import com.xiaomi.settings.touch.SingleTapService
 import com.xiaomi.settings.touch.TouchOrientationService
 import com.xiaomi.settings.touch.TouchPollingRateService
@@ -32,6 +33,7 @@ class BootCompletedReceiver : BroadcastReceiver() {
             UserHandle.CURRENT,
         )
         context.startServiceAsUser(Intent(context, SingleTapService::class.java), UserHandle.CURRENT)
+        context.startServiceAsUser(Intent(context, PickupService::class.java), UserHandle.CURRENT)
     }
 
     companion object {
