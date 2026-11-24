@@ -88,5 +88,9 @@
             android:name=".touch.TouchPollingRateService"
             android:exported="false" />
 
+        <service
+            android:name=".touch.SingleTapService"
+            android:exported="false" />
+
     </application>
 </manifest>

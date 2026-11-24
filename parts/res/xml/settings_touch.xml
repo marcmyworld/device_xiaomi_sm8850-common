@@ -12,4 +12,9 @@
         android:title="@string/touch_polling_title"
         android:summary="@string/touch_polling_summary" />
 
+    <SwitchPreferenceCompat
+        android:key="touch_single_tap_enabled"
+        android:title="@string/touch_single_tap_title"
+        android:summary="@string/touch_single_tap_summary" />
+
 </PreferenceScreen>
