@@ -1797,6 +1797,9 @@ vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml:vendor/etc/vin
 vendor/etc/permissions/android.hardware.usb.accessory.xml
 vendor/etc/permissions/android.hardware.usb.host.xml
 
+# Vibrator
+vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk.so
+
 # Wi-Fi
 vendor/bin/cnss-daemon
 vendor/bin/hw/vendor.xiaomi.cit.wifi-service

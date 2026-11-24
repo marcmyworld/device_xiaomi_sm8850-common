@@ -16,6 +16,7 @@ vendor.xiaomi.cit.wifi.IWifiService/default  u:object_r:hal_cit_wifi_service:s0
 vendor.xiaomi.cit.bluetooth.IBluetoothService/default  u:object_r:hal_cit_bluetooth_service:s0
 vendor.xiaomi.hardware.micharge.IMiCharge/default   u:object_r:hal_micharge_service:s0
 vendor.xiaomi.hardware.batteryantiaging.IBatteryAntiAging/default   u:object_r:hal_batteryantiaging_service:s0
+android.hardware.vibrator.IVibrator/vibratorfeature                          u:object_r:hal_vibrator_service:s0
 vendor.xiaomi.hardware.cld_aidl.ICld/default   u:object_r:hal_cld_service:s0
 vendor.xiaomi.hardware.swap.ISwap/default   u:object_r:hal_swap_service:s0
 vendor.xiaomi.hardware.fbo.IFbo/default   u:object_r:hal_fbo_service:s0
@@ -86,3 +87,6 @@ vendor.xiaomi.hardware.framemaster.IFrameMaster/default       u:object_r:vendor_
 vendor.xiaomi.hardware.framecapturemanager.IFrameCaptureManager/default     u:object_r:vendor_hal_framecapturemanager_xiaomi_service:s0
 vendor.novatek.hardware.visdisplaysrv.IVisdisplaysrv/default         u:object_r:hal_visdisplaysrv_service:s0
 vendor.xiaomi.hw.touchfeature.ITouchFeature/default          u:object_r:hal_touchfeature_xiaomi_service:s0
+
+# Stock vibrator HAL, renamed from IVibrator/default (vibratorfeature-wrapper serves default)
+android.hardware.vibrator.IVibrator/xiaomi                                   u:object_r:hal_vibrator_service:s0
