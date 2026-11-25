@@ -7,10 +7,14 @@
 package com.xiaomi.settings
 
 import android.content.BroadcastReceiver
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.UserHandle
 import android.util.Log
+import com.xiaomi.settings.display.AdaptiveRefreshRateService
+import com.xiaomi.settings.display.AdaptiveRefreshRateSettingsActivity
 import com.xiaomi.settings.display.ColorModeService
 import com.xiaomi.settings.doze.PickupService
 import com.xiaomi.settings.touch.SingleTapService
@@ -23,6 +27,19 @@ class BootCompletedReceiver : BroadcastReceiver() {
         if (DEBUG) Log.i(TAG, "Received intent: ${intent.action}")
         if (intent.action != Intent.ACTION_LOCKED_BOOT_COMPLETED) return
 
+        val arrSupported = AdaptiveRefreshRateService.isSupported(context)
+        context.packageManager.setComponentEnabledSetting(
+            ComponentName(context, AdaptiveRefreshRateSettingsActivity::class.java),
+            if (arrSupported) PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+            else PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP,
+        )
+        if (arrSupported) {
+            context.startServiceAsUser(
+                Intent(context, AdaptiveRefreshRateService::class.java),
+                UserHandle.CURRENT,
+            )
+        }
         context.startServiceAsUser(Intent(context, ColorModeService::class.java), UserHandle.CURRENT)
         context.startServiceAsUser(
             Intent(context, TouchOrientationService::class.java),

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/adaptive_refresh_rate_pro_title">
+
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="adaptive_refresh_rate_intro"
+        android:title="@string/adaptive_refresh_rate_pro_intro" />
+
+    <com.android.settingslib.widget.MainSwitchPreference
+        android:key="adaptive_refresh_rate_pro"
+        android:title="@string/adaptive_refresh_rate_pro_enable_title" />
+
+    <PreferenceCategory
+        android:key="adaptive_refresh_rate_options"
+        android:title="@string/adaptive_refresh_rate_options_title">
+
+        <SwitchPreferenceCompat
+            android:key="adaptive_refresh_rate_video_match"
+            android:title="@string/adaptive_refresh_rate_video_title"
+            android:summary="@string/adaptive_refresh_rate_video_summary" />
+
+    </PreferenceCategory>
+
+    <Preference
+        android:key="adaptive_refresh_rate_supported"
+        android:title="@string/adaptive_refresh_rate_status_title"
+        android:selectable="false" />
+
+</PreferenceScreen>

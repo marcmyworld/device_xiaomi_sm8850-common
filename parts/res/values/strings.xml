@@ -31,4 +31,16 @@
     <string name="thermalprofile_default">Default</string>
     <string name="thermalprofile_game">Game</string>
     <string name="thermalprofile_unknown">Unknown</string>
+
+    <!-- Adaptive refresh rate Pro -->
+    <string name="adaptive_refresh_rate_pro_title">Adaptive refresh rate Pro</string>
+    <string name="adaptive_refresh_rate_pro_summary">Unlock 10–120 Hz range and switch dimming from DC to PWM</string>
+    <string name="adaptive_refresh_rate_pro_intro">Unlocks LTPO adaptive refresh rate scaling down to 10 Hz when idle and 1 Hz on Always-On Display, and switches display dimming from DC to PWM.\n\nTurning this off restores DC dimming and the standard 60–120 Hz range.</string>
+    <string name="adaptive_refresh_rate_pro_enable_title">Use Adaptive refresh rate Pro</string>
+    <string name="adaptive_refresh_rate_options_title">Playback optimization</string>
+    <string name="adaptive_refresh_rate_video_title">Match video frame rate</string>
+    <string name="adaptive_refresh_rate_video_summary">Match exact 24, 30, or 60 Hz during video playback; when off, cap ≤30 Hz playback at 30 Hz and ≤60 Hz at 60 Hz</string>
+    <string name="adaptive_refresh_rate_status_title">Supported LTPO range</string>
+    <string name="adaptive_refresh_rate_status_summary">%1$d–%2$d Hz (%3$s Hz)</string>
+    <string name="adaptive_refresh_rate_unavailable_summary">LTPO adaptive refresh rate is not supported on this display</string>
 </resources>
