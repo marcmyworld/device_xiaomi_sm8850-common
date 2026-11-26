@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <!-- Soft diagonal pill zone -->
+    <path
+        android:pathData="M86,44L326,44A24,24 0,0 1,350 68L350,138A24,24 0,0 1,326 162L86,162A24,24 0,0 1,62 138L62,68A24,24 0,0 1,86 44z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerLowest" />
+    <!-- Accelerating rising bars -->
+    <path
+        android:pathData="M116,138L116,128M146,138L146,118M176,138L176,104M206,138L206,86M236,138L236,68"
+        android:strokeWidth="12"
+        android:strokeColor="@color/settingslib_materialColorPrimaryContainer"
+        android:strokeLineCap="round" />
+    <!-- Quick rise curve -->
+    <path
+        android:pathData="M98,136C166,136 226,116 286,62"
+        android:strokeWidth="6"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round" />
+    <!-- Arrowhead + bright peak halo -->
+    <path
+        android:pathData="M294,62m-26,0a26,26 0,1 1,52 0a26,26 0,1 1,-52 0"
+        android:fillColor="@color/settingslib_materialColorTertiaryFixedDim"
+        android:fillAlpha="0.55" />
+    <path
+        android:pathData="M266,60L288,58L284,80"
+        android:strokeWidth="5.5"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M292,58m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"
+        android:fillColor="@color/settingslib_materialColorPrimary" />
+</vector>

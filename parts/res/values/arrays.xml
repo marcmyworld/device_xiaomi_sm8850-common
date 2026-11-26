@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string-array name="haptics_click_effect_entries">
+        <item>Rounded punch (98 Hz · 15 ms)</item>
+        <item>Tight resonant snap (144 Hz · 14 ms)</item>
+        <item>Boundary resonant (171 Hz · 21 ms)</item>
+        <item>Sharp click (194 Hz · 16 ms)</item>
+        <item>Crisp snap (207 Hz · 10 ms)</item>
+        <item>Micro snap (206 Hz · 10 ms, half peak)</item>
+        <item>Crisp ring (225 Hz · 16 ms)</item>
+    </string-array>
+    <string-array name="haptics_click_effect_values">
+        <item>88</item>
+        <item>6</item>
+        <item>203</item>
+        <item>0</item>
+        <item>86</item>
+        <item>92</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="haptics_tick_effect_entries">
+        <item>Balanced soft (207 Hz · 10 ms)</item>
+        <item>Micro snap (206 Hz · 10 ms, half peak)</item>
+        <item>Low soft tick (134 Hz · 19 ms)</item>
+        <item>Damped tick (198 Hz · 23 ms)</item>
+        <item>Bright release (252 Hz · 12 ms)</item>
+        <item>Crisp micro (263 Hz · 8 ms)</item>
+        <item>High tick (314 Hz · 21 ms)</item>
+    </string-array>
+    <string-array name="haptics_tick_effect_values">
+        <item>86</item>
+        <item>92</item>
+        <item>11</item>
+        <item>102</item>
+        <item>7</item>
+        <item>84</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="haptics_heavy_effect_entries">
+        <item>Gesture thud (23 ms)</item>
+        <item>Deep pull (147 Hz · 31 ms)</item>
+        <item>Launcher punch (98 Hz · 15 ms)</item>
+        <item>Boundary impact (171 Hz · 21 ms)</item>
+        <item>Heavy click (223 Hz · 14 ms)</item>
+        <item>Deep thud (304 Hz · 15 ms)</item>
+        <item>Soft tab (25 ms)</item>
+    </string-array>
+    <string-array name="haptics_heavy_effect_values">
+        <item>163</item>
+        <item>162</item>
+        <item>88</item>
+        <item>203</item>
+        <item>5</item>
+        <item>3</item>
+        <item>188</item>
+    </string-array>
+
+    <string-array name="haptics_slider_effect_entries">
+        <item>Micro tap (206 Hz · 10 ms, half peak)</item>
+        <item>Damped tight tick (198 Hz · 23 ms)</item>
+        <item>Crisp tap (207 Hz · 10 ms)</item>
+        <item>Gentle low tick (134 Hz · 19 ms)</item>
+        <item>Ultra-light subtle (12 ms)</item>
+        <item>Crisp unit tick (13 ms)</item>
+    </string-array>
+    <string-array name="haptics_slider_effect_values">
+        <item>92</item>
+        <item>102</item>
+        <item>86</item>
+        <item>11</item>
+        <item>183</item>
+        <item>181</item>
+    </string-array>
+
+    <string-array name="haptics_quick_rise_effect_entries">
+        <item>Gesture pull (147 Hz · 31 ms)</item>
+        <item>Fingerprint rise (147 Hz · 31 ms)</item>
+        <item>Soft tab rise (25 ms)</item>
+        <item>Boundary resonant (171 Hz · 21 ms)</item>
+        <item>Pop rise (315 Hz · 14 ms)</item>
+        <item>Deep swell (210 Hz · 64 ms)</item>
+    </string-array>
+    <string-array name="haptics_quick_rise_effect_values">
+        <item>162</item>
+        <item>168</item>
+        <item>188</item>
+        <item>203</item>
+        <item>4</item>
+        <item>169</item>
+    </string-array>
+
+    <string-array name="haptics_quick_fall_effect_entries">
+        <item>Soft tab fall (25 ms)</item>
+        <item>Neutral drop (314 Hz · 14 ms)</item>
+        <item>Negative light (55 Hz · 117 ms)</item>
+        <item>Switch settle (191 Hz · 87 ms)</item>
+        <item>Resonant snap (144 Hz · 14 ms)</item>
+        <item>Rounded drop (98 Hz · 15 ms)</item>
+    </string-array>
+    <string-array name="haptics_quick_fall_effect_values">
+        <item>188</item>
+        <item>166</item>
+        <item>165</item>
+        <item>187</item>
+        <item>6</item>
+        <item>88</item>
+    </string-array>
+
+    <string-array name="haptics_slow_rise_effect_entries">
+        <item>Smooth fade-in (215 ms)</item>
+        <item>Icon swell (173 Hz · 213 ms)</item>
+        <item>Seekbar swell (190 Hz · 226 ms)</item>
+        <item>Light transition (80 Hz · 213 ms)</item>
+        <item>Short heavy rise (223 Hz · 14 ms)</item>
+    </string-array>
+    <string-array name="haptics_slow_rise_effect_values">
+        <item>57</item>
+        <item>172</item>
+        <item>186</item>
+        <item>190</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="haptics_spin_effect_entries">
+        <item>Sliding damping (79 Hz · 196 ms)</item>
+        <item>Popup spin (280 Hz · 168 ms)</item>
+        <item>Completion wave (100 Hz · 444 ms)</item>
+        <item>Soft transition wave (78 Hz · 510 ms)</item>
+        <item>Crisp spin tap (304 Hz · 15 ms)</item>
+    </string-array>
+    <string-array name="haptics_spin_effect_values">
+        <item>170</item>
+        <item>185</item>
+        <item>171</item>
+        <item>191</item>
+        <item>3</item>
+    </string-array>
+</resources>

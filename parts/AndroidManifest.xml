@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.MONITOR_INPUT" />
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
@@ -91,6 +92,34 @@
                 android:name="com.android.settings.summary"
                 android:value="@string/adaptive_refresh_rate_pro_summary" />
         </activity>
+
+        <activity
+            android:name=".haptics.HapticsSettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:icon="@drawable/ic_haptics"
+            android:label="@string/haptics_settings_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_haptics" />
+            <meta-data
+                android:name="com.android.settings.icon_tintable"
+                android:value="true" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:value="@string/haptics_settings_summary" />
+        </activity>
+
+        <service
+            android:name=".haptics.HapticsService"
+            android:exported="false" />
 
         <service
             android:name=".display.AdaptiveRefreshRateService"

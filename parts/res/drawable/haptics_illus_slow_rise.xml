@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <path
+        android:pathData="M74,48L338,48A26,26 0,0 1,364 74L364,132A26,26 0,0 1,338 158L74,158A26,26 0,0 1,48 132L48,74A26,26 0,0 1,74 48z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerLowest" />
+    <!-- Gradual expanding wave swell envelope -->
+    <path
+        android:pathData="M82,103C156,100 226,84 300,66L300,140C226,122 156,106 82,103Z"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer" />
+    <path
+        android:pathData="M84,103L106,103M124,103L146,103M164,95L164,111M190,89L190,117M216,82L216,124M242,76L242,130M268,70L268,136"
+        android:strokeWidth="5.5"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round" />
+    <!-- Warm resonant orb at end of swell -->
+    <path
+        android:pathData="M308,103m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0"
+        android:fillColor="@color/settingslib_materialColorTertiaryFixedDim"
+        android:fillAlpha="0.65" />
+    <path
+        android:pathData="M308,103m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0"
+        android:fillColor="@color/settingslib_materialColorPrimary" />
+</vector>

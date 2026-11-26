@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <!-- Outer soft circular aura -->
+    <path
+        android:pathData="M206,103m-76,0a76,76 0,1 1,152 0a76,76 0,1 1,-152 0"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer"
+        android:fillAlpha="0.45" />
+    <!-- Orbital dial ring -->
+    <path
+        android:pathData="M206,103m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0"
+        android:strokeWidth="10"
+        android:strokeColor="@color/settingslib_materialColorPrimaryContainer" />
+    <!-- Active sweeping rotary arc -->
+    <path
+        android:pathData="M206,49A54,54 0,1 1,152 103"
+        android:strokeWidth="10"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round" />
+    <!-- Rotary directional arrowhead -->
+    <path
+        android:pathData="M140,113L152,98L165,111"
+        android:strokeWidth="5"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- Evenly spaced radial tick dots + center hub -->
+    <path
+        android:pathData="M206,33m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0M256,53m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0M276,103m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0M256,153m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0M206,173m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+        android:fillColor="@color/settingslib_materialColorTertiary" />
+    <path
+        android:pathData="M206,103m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0"
+        android:fillColor="@color/settingslib_materialColorTertiaryFixedDim" />
+    <path
+        android:pathData="M206,103m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"
+        android:fillColor="@color/settingslib_materialColorOnTertiaryFixed" />
+</vector>

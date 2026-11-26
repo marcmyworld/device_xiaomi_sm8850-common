@@ -43,4 +43,110 @@
     <string name="adaptive_refresh_rate_status_title">Supported LTPO range</string>
     <string name="adaptive_refresh_rate_status_summary">%1$d–%2$d Hz (%3$s Hz)</string>
     <string name="adaptive_refresh_rate_unavailable_summary">LTPO adaptive refresh rate is not supported on this display</string>
+
+    <!-- Haptics calibration -->
+    <string name="haptics_settings_title">Haptic calibration</string>
+    <string name="haptics_settings_summary">Tune haptic waveform feel, stock profile, and strength limits</string>
+    <string name="haptics_intro">Select a haptic response profile or calibrate individual firmware waveforms and hardware gain limits. Changes apply immediately without rebooting.</string>
+    <string name="haptics_unavailable_summary">Haptic tuner HAL is not available on this device.</string>
+
+    <string name="haptics_profile_category">Haptic profile</string>
+    <string name="haptics_profile_stock_title">Xiaomi</string>
+    <string name="haptics_profile_stock_summary">Clean, distortion-free stock thud where every subtle vibration feels distinct and intentional</string>
+    <string name="haptics_profile_balanced_title">Breeze</string>
+    <string name="haptics_profile_balanced_summary">Calm, soothing 85–105 Hz low-frequency response with smooth key releases and gentle slider ticks</string>
+    <string name="haptics_profile_crisp_tight_title">Subtle</string>
+    <string name="haptics_profile_crisp_tight_summary">Damped 144 Hz resonant clicks with restrained tail and light, unobtrusive feedback</string>
+    <string name="haptics_profile_thin_light_title">Feather</string>
+    <string name="haptics_profile_thin_light_summary">Airy, whisper-light micro-transients with half-peak amplitude for delicate taps</string>
+    <string name="haptics_profile_custom_title">Custom calibration</string>
+    <string name="haptics_profile_custom_summary">Configure individual waveforms, hardware strength ceilings, and trigger sensitivity</string>
+    <string name="haptics_stock_slider_safety_title">Scale-safe sliders</string>
+    <string name="haptics_stock_slider_safety_summary">Keep subtle slider textures at light hardware gain in Xiaomi mode</string>
+
+    <string name="haptics_test_category">Interactive test pad</string>
+    <string name="haptics_test_tick">Tick</string>
+    <string name="haptics_test_key_press">Key press</string>
+    <string name="haptics_test_key_tap">Key tap</string>
+    <string name="haptics_test_double_tap">Double tap</string>
+    <string name="haptics_test_gesture">Back swipe</string>
+    <string name="haptics_test_confirm">Confirm</string>
+    <string name="haptics_test_heavy">Heavy thud</string>
+    <string name="haptics_test_reset">Reset</string>
+    <string name="haptics_test_slider_title">Test slider texture</string>
+    <string name="haptics_test_slider_summary">Drag smoothly to feel low-tick slider grain</string>
+
+    <string name="haptics_custom_strength_category">Hardware strength limits</string>
+    <string name="haptics_custom_waveform_category">Waveform &amp; frequency tuning</string>
+    <string name="haptics_click_effect_title">Clicks &amp; keyboard press</string>
+    <string name="haptics_click_strength_title">Clicks &amp; keyboard press</string>
+    <string name="haptics_tick_effect_title">Key release &amp; light ticks</string>
+    <string name="haptics_tick_strength_title">Key release &amp; light ticks</string>
+    <string name="haptics_heavy_effect_title">Heavy thud &amp; back release</string>
+    <string name="haptics_heavy_strength_title">Heavy thud &amp; back release</string>
+    <string name="haptics_slider_effect_title">Slider &amp; scroll texture</string>
+    <string name="haptics_slider_strength_title">Slider &amp; scroll texture</string>
+    <string name="haptics_quick_rise_effect_title">Quick rise (back swipe pull)</string>
+    <string name="haptics_quick_rise_strength_title">Quick rise (back swipe pull)</string>
+    <string name="haptics_quick_fall_effect_title">Quick fall</string>
+    <string name="haptics_quick_fall_strength_title">Quick fall</string>
+    <string name="haptics_slow_rise_effect_title">Slow rise</string>
+    <string name="haptics_slow_rise_strength_title">Slow rise</string>
+    <string name="haptics_spin_effect_title">Spin</string>
+    <string name="haptics_spin_strength_title">Spin</string>
+    <string name="haptics_scale_bias_title">Trigger sensitivity bias</string>
+    <string name="haptics_scale_bias_summary" formatted="false">Shifts primitive strength thresholds (-20% softer to +20% firmer)</string>
+    <string name="haptics_strength_off">Off (0%)</string>
+    <string name="haptics_strength_light">30% (Light · HAL min)</string>
+    <string name="haptics_strength_medium">50% (Medium)</string>
+    <string name="haptics_strength_strong">100% (Strong)</string>
+    <string name="haptics_strength_custom">%1$d%%</string>
+
+    <string name="haptics_waveform_guide_title">Visual waveform guide</string>
+    <string name="haptics_waveform_guide_summary">Illustrated breakdown of each waveform type with tap-to-feel preview</string>
+    <string name="haptics_waveform_guide_hint">Tap any card below to feel that waveform live with your current tuning</string>
+    <string name="haptics_waveform_picker_hint">Select a firmware waveform below to feel it immediately</string>
+    <string name="haptics_desc_click">Crisp single impact for button taps, launcher clicks, and keyboard key presses.</string>
+    <string name="haptics_desc_tick">Light upper transient played on key releases, micro selections, and switch detents.</string>
+    <string name="haptics_desc_heavy">Deep low-frequency thump used for long-press actions, back commit, and heavy confirmations.</string>
+    <string name="haptics_desc_slider">Fine low-amplitude grain repeated smoothly while dragging sliders or scrolling lists.</string>
+    <string name="haptics_desc_quick_rise">Fast ascending swell that builds tactile tension during back-swipe pulls and edge triggers.</string>
+    <string name="haptics_desc_quick_fall">Clean downward drop that settles quickly without harsh bounce when gestures or toggles release.</string>
+    <string name="haptics_desc_slow_rise">Gradual prolonged crescendo used during long holds, zoom swells, and progressive animations.</string>
+    <string name="haptics_desc_spin">Repeating rotary pulse pattern tailored for orbital dials, spinners, and radial scrubbers.</string>
+
+    <string name="haptics_saved_profiles_category">Custom profile manager</string>
+    <string name="haptics_saved_profile_select_title">Saved custom profiles</string>
+    <string name="haptics_saved_profile_none">No saved profiles yet · Tap Save or Import below</string>
+    <string name="haptics_saved_profile_summary_active" formatted="false">Selected: %1$s (%2$d saved · tap to switch)</string>
+    <string name="haptics_saved_profile_summary_pick" formatted="false">%1$d saved profile(s) · Tap to select</string>
+    <string name="haptics_saved_profile_add_menu">Save current setup as…</string>
+    <string name="haptics_action_save">Save</string>
+    <string name="haptics_action_export">Export</string>
+    <string name="haptics_action_import">Import</string>
+    <string name="haptics_action_delete">Delete</string>
+    <string name="haptics_save_dialog_title">Save custom profile</string>
+    <string name="haptics_save_dialog_hint">Profile name (e.g. Crisp Typing)</string>
+    <string name="haptics_save_toast">Saved \"%1$s\"</string>
+    <string name="haptics_loaded_toast">Applied \"%1$s\"</string>
+    <string name="haptics_export_dialog_title">Export \"%1$s\"</string>
+    <string name="haptics_export_save_file">Save as .json file</string>
+    <string name="haptics_export_share">Share JSON text</string>
+    <string name="haptics_export_copy">Copy JSON to clipboard</string>
+    <string name="haptics_export_copied">Copied \"%1$s\" JSON to clipboard</string>
+    <string name="haptics_export_file_saved">Exported \"%1$s\"</string>
+    <string name="haptics_export_file_failed">Failed to export profile file</string>
+    <string name="haptics_import_dialog_title">Import custom profile</string>
+    <string name="haptics_import_from_file">Choose .json file</string>
+    <string name="haptics_import_paste">Paste JSON text</string>
+    <string name="haptics_import_paste_hint">Paste exported profile JSON here</string>
+    <string name="haptics_import_success">Imported and applied \"%1$s\"</string>
+    <string name="haptics_import_invalid">Invalid haptic profile JSON</string>
+    <string name="haptics_delete_dialog_title">Delete \"%1$s\"?</string>
+    <string name="haptics_delete_dialog_message">Removes this saved custom profile from your device.</string>
+    <string name="haptics_delete_toast">Deleted \"%1$s\"</string>
+
+    <string name="haptics_hardware_info_summary">Hardware LRA calibration: %1$.1f Hz resonant frequency (F0) · Q-factor %2$.1f</string>
+    <string name="haptics_hardware_info_f0_only">Hardware LRA calibration: %1$.1f Hz resonant frequency (F0)</string>
+    <string name="haptics_hardware_info_fallback">Hardware LRA calibration active via Xiaomi Vibrator HAL</string>
 </resources>

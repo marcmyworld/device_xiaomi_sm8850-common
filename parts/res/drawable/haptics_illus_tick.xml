@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <!-- Expressive starburst container behind key release -->
+    <path
+        android:pathData="M206,36L224,50L246,45L254,67L275,76L270,98L283,116L266,132L269,154L247,158L235,176L213,167L193,176L181,158L159,154L162,132L145,116L158,98L153,76L174,67L182,45L204,50Z"
+        android:fillColor="@color/settingslib_materialColorTertiaryFixedDim"
+        android:fillAlpha="0.45" />
+    <!-- Ground resting plate -->
+    <path
+        android:pathData="M152,146L260,146A8,8 0,0 1,268 154L268,154A8,8 0,0 1,260 162L152,162A8,8 0,0 1,144 154L144,154A8,8 0,0 1,152 146z"
+        android:fillColor="@color/settingslib_materialColorOutlineVariant" />
+    <!-- Rebounding keycap (lifted upward) -->
+    <path
+        android:pathData="M170,94L242,94A16,16 0,0 1,258 110L258,128A16,16 0,0 1,242 144L170,144A16,16 0,0 1,154 128L154,110A16,16 0,0 1,170 94z"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer" />
+    <!-- Release upward arrow & light tick arcs -->
+    <path
+        android:pathData="M206,128L206,108M196,116L206,106L216,116"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/settingslib_materialColorOnPrimaryContainer"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M178,76C193,64 219,64 234,76"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M190,60C199,53 213,53 222,60"
+        android:strokeWidth="4"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeAlpha="0.65"
+        android:strokeLineCap="round" />
+    <!-- Flanking delicate tick pips -->
+    <path
+        android:pathData="M118,118m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0"
+        android:fillColor="@color/settingslib_materialColorPrimary"
+        android:fillAlpha="0.55" />
+    <path
+        android:pathData="M294,118m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0"
+        android:fillColor="@color/settingslib_materialColorPrimary"
+        android:fillAlpha="0.55" />
+</vector>

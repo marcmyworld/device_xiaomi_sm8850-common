@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <path
+        android:pathData="M86,44L326,44A24,24 0,0 1,350 68L350,138A24,24 0,0 1,326 162L86,162A24,24 0,0 1,62 138L62,68A24,24 0,0 1,86 44z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerLowest" />
+    <!-- Descending step bars -->
+    <path
+        android:pathData="M146,138L146,68M176,138L176,86M206,138L206,104M236,138L236,118M266,138L266,128"
+        android:strokeWidth="12"
+        android:strokeColor="@color/settingslib_materialColorSecondaryContainer"
+        android:strokeLineCap="round" />
+    <!-- Elevated release start halo -->
+    <path
+        android:pathData="M116,66m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer" />
+    <path
+        android:pathData="M116,66m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+        android:fillColor="@color/settingslib_materialColorPrimary" />
+    <!-- Smooth quick fall settling to flat damped baseline -->
+    <path
+        android:pathData="M116,66C174,80 202,134 308,136"
+        android:strokeWidth="6"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M294,122L310,136L294,148"
+        android:strokeWidth="5"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

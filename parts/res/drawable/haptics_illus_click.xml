@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <!-- Rounded Material 3 Expressive card container -->
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <!-- Subtle keyboard row backdrop pills -->
+    <path
+        android:pathData="M78,108L128,108A14,14 0,0 1,142 122L142,140A14,14 0,0 1,128 154L78,154A14,14 0,0 1,64 140L64,122A14,14 0,0 1,78 108z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerHigh" />
+    <path
+        android:pathData="M284,108L334,108A14,14 0,0 1,348 122L348,140A14,14 0,0 1,334 154L284,154A14,14 0,0 1,270 140L270,122A14,14 0,0 1,284 108z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerHigh" />
+    <path
+        android:pathData="M114,52L148,52A12,12 0,0 1,160 64L160,82A12,12 0,0 1,148 94L114,94A12,12 0,0 1,102 82L102,64A12,12 0,0 1,114 52z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerHigh" />
+    <path
+        android:pathData="M264,52L298,52A12,12 0,0 1,310 64L310,82A12,12 0,0 1,298 94L264,94A12,12 0,0 1,252 82L252,64A12,12 0,0 1,264 52z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerHigh" />
+    <!-- Outer concentric crisp pulse -->
+    <path
+        android:pathData="M206,103m-66,0a66,66 0,1 1,132 0a66,66 0,1 1,-132 0"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer"
+        android:fillAlpha="0.45" />
+    <!-- Inner halo -->
+    <path
+        android:pathData="M206,103m-46,0a46,46 0,1 1,92 0a46,46 0,1 1,-92 0"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer" />
+    <!-- Depressed keycap pill -->
+    <path
+        android:pathData="M168,78L244,78A18,18 0,0 1,262 96L262,138A18,18 0,0 1,244 156L168,156A18,18 0,0 1,150 138L150,96A18,18 0,0 1,168 78z"
+        android:fillColor="@color/settingslib_materialColorPrimary" />
+    <!-- Crisp tactile impact wave & center dot -->
+    <path
+        android:pathData="M180,117L191,117L199,97L207,137L215,107L221,117L232,117"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/settingslib_materialColorOnPrimary"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- Side click ripple arcs -->
+    <path
+        android:pathData="M134,86C125,96 125,112 134,122M278,86C287,96 287,112 278,122"
+        android:strokeWidth="4"
+        android:strokeColor="@color/settingslib_materialColorPrimary"
+        android:strokeLineCap="round" />
+</vector>

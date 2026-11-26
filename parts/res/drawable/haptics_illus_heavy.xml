@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <!-- Wide low-frequency impact rings -->
+    <path
+        android:pathData="M226,120m-76,0a76,76 0,1 1,152 0a76,76 0,1 1,-152 0"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer"
+        android:fillAlpha="0.38" />
+    <path
+        android:pathData="M226,120m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer" />
+    <!-- Left back-gesture edge frame & chevron -->
+    <path
+        android:pathData="M60,44L122,44A16,16 0,0 1,138 60L138,146A16,16 0,0 1,122 162L60,162A16,16 0,0 1,44 146L44,60A16,16 0,0 1,60 44z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerLowest" />
+    <path
+        android:pathData="M56,82L84,82A14,14 0,0 1,98 96L98,110A14,14 0,0 1,84 124L56,124A14,14 0,0 1,42 110L42,96A14,14 0,0 1,56 82z"
+        android:fillColor="@color/settingslib_materialColorTertiaryFixedDim" />
+    <path
+        android:pathData="M73,94L63,103L73,112"
+        android:strokeWidth="4"
+        android:strokeColor="@color/settingslib_materialColorOnTertiaryFixed"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- Bold weighted thud block + shockwaves -->
+    <path
+        android:pathData="M188,88L264,88A20,20 0,0 1,284 108L284,132A20,20 0,0 1,264 152L188,152A20,20 0,0 1,168 132L168,108A20,20 0,0 1,188 88z"
+        android:fillColor="@color/settingslib_materialColorPrimary" />
+    <path
+        android:pathData="M174,166L278,166A6,6 0,0 1,284 172L284,172A6,6 0,0 1,278 178L174,178A6,6 0,0 1,168 172L168,172A6,6 0,0 1,174 166z"
+        android:fillColor="@color/settingslib_materialColorPrimary"
+        android:fillAlpha="0.5" />
+    <path
+        android:pathData="M196,120L211,120L219,102L226,138L234,102L241,120L256,120"
+        android:strokeWidth="5"
+        android:strokeColor="@color/settingslib_materialColorOnPrimary"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

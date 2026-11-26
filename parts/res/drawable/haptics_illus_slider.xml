@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="206dp"
+    android:viewportWidth="412"
+    android:viewportHeight="206">
+    <path
+        android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainer" />
+    <!-- Ambient rounded container pill -->
+    <path
+        android:pathData="M78,54L334,54A28,28 0,0 1,362 82L362,124A28,28 0,0 1,334 152L78,152A28,28 0,0 1,50 124L50,82A28,28 0,0 1,78 54z"
+        android:fillColor="@color/settingslib_materialColorSurfaceContainerLowest" />
+    <!-- Slider inactive full track -->
+    <path
+        android:pathData="M96,95L316,95A8,8 0,0 1,324 103L324,103A8,8 0,0 1,316 111L96,111A8,8 0,0 1,88 103L88,103A8,8 0,0 1,96 95z"
+        android:fillColor="@color/settingslib_materialColorPrimaryContainer" />
+    <!-- Slider active left portion -->
+    <path
+        android:pathData="M96,95L232,95A8,8 0,0 1,240 103L240,103A8,8 0,0 1,232 111L96,111A8,8 0,0 1,88 103L88,103A8,8 0,0 1,96 95z"
+        android:fillColor="@color/settingslib_materialColorPrimary" />
+    <!-- Repeating low-tick tactile pips along track -->
+    <path
+        android:pathData="M114,103m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0M142,103m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0M170,103m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0M198,103m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="@color/settingslib_materialColorOnPrimary"
+        android:fillAlpha="0.7" />
+    <path
+        android:pathData="M264,103m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0M292,103m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="@color/settingslib_materialColorOnPrimaryContainer"
+        android:fillAlpha="0.6" />
+    <!-- Material 3 Expressive vertical pill slider thumb -->
+    <path
+        android:pathData="M235,76L241,76A6,6 0,0 1,247 82L247,124A6,6 0,0 1,241 130L235,130A6,6 0,0 1,229 124L229,82A6,6 0,0 1,235 76z"
+        android:fillColor="@color/settingslib_materialColorPrimary" />
+    <!-- Tactile grain bars underneath -->
+    <path
+        android:pathData="M114,168L114,176M142,165L142,179M170,168L170,176M198,165L198,179M226,162L226,182M254,165L254,179M282,168L282,176"
+        android:strokeWidth="4"
+        android:strokeColor="@color/settingslib_materialColorTertiary"
+        android:strokeAlpha="0.65"
+        android:strokeLineCap="round" />
+</vector>

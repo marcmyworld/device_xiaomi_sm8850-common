@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/haptics_settings_title">
+
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="haptics_intro"
+        android:title="@string/haptics_intro" />
+
+    <PreferenceCategory
+        android:key="haptics_profile_category"
+        android:title="@string/haptics_profile_category">
+
+        <com.android.settingslib.widget.SelectorWithWidgetPreference
+            android:key="haptics_profile_stock"
+            android:title="@string/haptics_profile_stock_title"
+            android:summary="@string/haptics_profile_stock_summary" />
+
+        <SwitchPreferenceCompat
+            android:key="haptics_stock_slider_safety"
+            android:title="@string/haptics_stock_slider_safety_title"
+            android:summary="@string/haptics_stock_slider_safety_summary" />
+
+        <com.android.settingslib.widget.SelectorWithWidgetPreference
+            android:key="haptics_profile_balanced"
+            android:title="@string/haptics_profile_balanced_title"
+            android:summary="@string/haptics_profile_balanced_summary" />
+
+        <com.android.settingslib.widget.SelectorWithWidgetPreference
+            android:key="haptics_profile_crisp_tight"
+            android:title="@string/haptics_profile_crisp_tight_title"
+            android:summary="@string/haptics_profile_crisp_tight_summary" />
+
+        <com.android.settingslib.widget.SelectorWithWidgetPreference
+            android:key="haptics_profile_thin_light"
+            android:title="@string/haptics_profile_thin_light_title"
+            android:summary="@string/haptics_profile_thin_light_summary" />
+
+        <com.android.settingslib.widget.SelectorWithWidgetPreference
+            android:key="haptics_profile_custom"
+            android:title="@string/haptics_profile_custom_title"
+            android:summary="@string/haptics_profile_custom_summary" />
+
+        <Preference
+            android:key="haptics_waveform_guide"
+            android:title="@string/haptics_waveform_guide_title"
+            android:summary="@string/haptics_waveform_guide_summary"
+            android:icon="@drawable/ic_haptics_pulse" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="haptics_test_category"
+        android:title="@string/haptics_test_category">
+
+        <com.android.settingslib.widget.ActionButtonsPreference
+            android:key="haptics_test_actions_1" />
+
+        <com.android.settingslib.widget.ActionButtonsPreference
+            android:key="haptics_test_actions_2" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_test_slider"
+            android:title="@string/haptics_test_slider_title"
+            android:summary="@string/haptics_test_slider_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="haptics_custom_strength_category"
+        android:title="@string/haptics_custom_strength_category">
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_click_strength"
+            android:title="@string/haptics_click_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_tick_strength"
+            android:title="@string/haptics_tick_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_heavy_strength"
+            android:title="@string/haptics_heavy_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_slider_strength"
+            android:title="@string/haptics_slider_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_quick_rise_strength"
+            android:title="@string/haptics_quick_rise_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_quick_fall_strength"
+            android:title="@string/haptics_quick_fall_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_slow_rise_strength"
+            android:title="@string/haptics_slow_rise_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_spin_strength"
+            android:title="@string/haptics_spin_strength_title" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="haptics_scale_bias"
+            android:title="@string/haptics_scale_bias_title"
+            android:summary="@string/haptics_scale_bias_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="haptics_custom_waveform_category"
+        android:title="@string/haptics_custom_waveform_category">
+
+        <Preference
+            android:key="haptics_click_effect"
+            android:title="@string/haptics_click_effect_title" />
+
+        <Preference
+            android:key="haptics_tick_effect"
+            android:title="@string/haptics_tick_effect_title" />
+
+        <Preference
+            android:key="haptics_heavy_effect"
+            android:title="@string/haptics_heavy_effect_title" />
+
+        <Preference
+            android:key="haptics_slider_effect"
+            android:title="@string/haptics_slider_effect_title" />
+
+        <Preference
+            android:key="haptics_quick_rise_effect"
+            android:title="@string/haptics_quick_rise_effect_title" />
+
+        <Preference
+            android:key="haptics_quick_fall_effect"
+            android:title="@string/haptics_quick_fall_effect_title" />
+
+        <Preference
+            android:key="haptics_slow_rise_effect"
+            android:title="@string/haptics_slow_rise_effect_title" />
+
+        <Preference
+            android:key="haptics_spin_effect"
+            android:title="@string/haptics_spin_effect_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="haptics_saved_profiles_category"
+        android:title="@string/haptics_saved_profiles_category">
+
+        <Preference
+            android:key="haptics_saved_profile_select"
+            android:title="@string/haptics_saved_profile_select_title"
+            android:icon="@drawable/ic_haptics_pulse" />
+
+        <com.android.settingslib.widget.ActionButtonsPreference
+            android:key="haptics_saved_profile_actions" />
+
+    </PreferenceCategory>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="haptics_hardware_info"
+        android:selectable="false" />
+
+</PreferenceScreen>

@@ -17,6 +17,9 @@ import com.xiaomi.settings.display.AdaptiveRefreshRateService
 import com.xiaomi.settings.display.AdaptiveRefreshRateSettingsActivity
 import com.xiaomi.settings.display.ColorModeService
 import com.xiaomi.settings.doze.PickupService
+import com.xiaomi.settings.haptics.HapticsService
+import com.xiaomi.settings.haptics.HapticsSettingsActivity
+import com.xiaomi.settings.haptics.VibratorTunerWrapper
 import com.xiaomi.settings.touch.SingleTapService
 import com.xiaomi.settings.touch.TouchOrientationService
 import com.xiaomi.settings.touch.TouchPollingRateService
@@ -51,6 +54,19 @@ class BootCompletedReceiver : BroadcastReceiver() {
         )
         context.startServiceAsUser(Intent(context, SingleTapService::class.java), UserHandle.CURRENT)
         context.startServiceAsUser(Intent(context, PickupService::class.java), UserHandle.CURRENT)
+
+        val hapticsSupported = VibratorTunerWrapper.isSupported(context)
+        runCatching {
+            context.packageManager.setComponentEnabledSetting(
+                ComponentName(context, HapticsSettingsActivity::class.java),
+                if (hapticsSupported) PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                else PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                PackageManager.DONT_KILL_APP,
+            )
+        }.onFailure { e -> Log.w(TAG, "Failed to update HapticsSettingsActivity state", e) }
+        if (hapticsSupported) {
+            context.startServiceAsUser(Intent(context, HapticsService::class.java), UserHandle.CURRENT)
+        }
     }
 
     companion object {
