@@ -90,3 +90,4 @@ vendor.xiaomi.hw.touchfeature.ITouchFeature/default          u:object_r:hal_touc
 
 # Stock vibrator HAL, renamed from IVibrator/default (vibratorfeature-wrapper serves default)
 android.hardware.vibrator.IVibrator/xiaomi                                   u:object_r:hal_vibrator_service:s0
+vendor.xiaomi.hardware.vibratortuner.IVibratorTuner/default                  u:object_r:hal_vibrator_tuner_service:s0

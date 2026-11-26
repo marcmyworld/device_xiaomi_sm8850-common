@@ -37,5 +37,9 @@ allow hal_vibrator_default vendor_sysfs_haptics:lnk_file { ioctl read getattr lo
 allow hal_vibrator_default vendor_sysfs_sndcard:file { ioctl read write getattr lock append map open watch watch_reads };
 
 # vibratorfeature-wrapper forwards to the stock HAL (IVibrator/xiaomi) in the same domain
+# and exposes IVibratorTuner/default to XiaomiParts (platform_app / system_app)
 allow hal_vibrator_default hal_vibrator_service:service_manager find;
+allow hal_vibrator_default hal_vibrator_tuner_service:service_manager { add find };
+allow hal_vibrator_default platform_app_all:binder { call transfer };
+allow hal_vibrator_default system_app:binder { call transfer };
 binder_call(hal_vibrator_default, hal_vibrator_default)

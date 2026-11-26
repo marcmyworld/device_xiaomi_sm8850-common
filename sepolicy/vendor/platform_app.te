@@ -83,6 +83,8 @@ allow platform_app_all hal_ozonotify_service:service_manager { find };
 allow platform_app_all hal_postprocservice_service:service_manager { find };
 allow platform_app_all hal_quickcamera_service:service_manager { find };
 allow platform_app_all hal_touchfeature_xiaomi_service:service_manager { find };
+allow platform_app_all hal_vibrator_default:binder { call transfer };
+allow platform_app_all hal_vibrator_tuner_service:service_manager { find };
 allow platform_app_all hal_visdisplaysrv_service:service_manager { find };
 allow platform_app_all init:unix_stream_socket { connectto };
 allow platform_app_all nfc_service:service_manager { find };

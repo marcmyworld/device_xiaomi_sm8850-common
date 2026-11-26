@@ -51,6 +51,7 @@ type hal_uniperf_service, hal_service_type, protected_service, service_manager_t
 type hal_videoservice_service, hal_service_type, service_manager_type;
 type hal_visdisplaysrv_service, hal_service_type, protected_service, service_manager_type;
 type hal_vsimapp_service, hal_service_type, protected_service, service_manager_type;
+type hal_vibrator_tuner_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_citsensorservice_xiaomi_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_displayfeature_xiaomi_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_fingerprint_service_xiaomi, hal_service_type, protected_service, service_manager_type;

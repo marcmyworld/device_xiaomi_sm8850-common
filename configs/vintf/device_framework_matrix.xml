@@ -164,6 +164,14 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.xiaomi.hardware.vibratortuner</name>
+        <version>1</version>
+        <interface>
+            <name>IVibratorTuner</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.xiaomi.modem.qms</name>
         <version>1</version>
         <interface>
